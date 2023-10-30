@@ -2,5 +2,9 @@ Project
 =============
 Please use this template for your project.
 
-List your group's member's below with ID and name.
-
+Kittaphat  Duangnaen  6531503003
+Trerat     Khampanya   6531503030
+Prathana   Maneejunsul  6531503051
+Paweethida  Khamsaenthan  6531503052
+Pimpha      Wongpracha    6531503059
+Phetcharat  Singhattha    6531503061
