@@ -1,15 +1,13 @@
 package th.mfu.Controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 
-public class usercontroller {
-
-    private UserService userService;
-
-    @GetMapping(value = "/resgister")
-    public String newUser
-
+public class UserController {
+    @RequestMapping("/")
+    public String Register() {
+        return "register";
+    }
 }
