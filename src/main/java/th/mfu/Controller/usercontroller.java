@@ -1,0 +1,15 @@
+package th.mfu.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+
+public class usercontroller {
+
+    private UserService userService;
+
+    @GetMapping(value = "/resgister")
+    public String newUser
+
+}
