@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class UserController {
-    @RequestMapping("/")
+    @RequestMapping("/register")
     public String Register() {
         return "register";
     }
