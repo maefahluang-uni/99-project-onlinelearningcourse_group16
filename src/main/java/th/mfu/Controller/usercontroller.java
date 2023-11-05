@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class UserController {
-    @RequestMapping("/register")
-    public String Register() {
-        return "register";
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
     }
 }
