@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.contain{
+    max-width: 1280px;
+    height: 1741px;
+    margin: 0 auto;
+    border: 1px solid rgb(253, 156, 245);
+
+}
+
+.subject{
+    display: flex;
+    margin-right: 41.79px;
+    border: 1px solid rgb(47, 0, 255);
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+intro{
+    display: flex;
+    margin-right: 41.79px;
+    border: 1px solid red;
+}
+
+.introduction{
+    color: #428749;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.lessonhour{
+    display: flex;
+    width: 150px;
+    height: 18.809px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid red;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px saddlebrown;
+    padding: 10px;
+}
+
+.back{
+    width: 49.732px;
+    height: 100px;
+    flex-shrink: 0;
+    
+}
+
+.subject{
+    color: #000;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
