@@ -1,0 +1,14 @@
+<form action="<?=$_SERVER['PHP_SELF'];?> " method="POST">
+      กรุณายอดเงิน <input type="text" name="itemamount">
+      <input type="submit" value="ตกลง">
+
+ </form>
+
+ <?php
+
+ isset($_POST['itemamount'])?$itemamount = $itemamount = $_POST['itemamount'] :$itemamount ="";
+ $request_headers = array(
+  "Cache-Control: no-cache",
+  );
+
+  if
