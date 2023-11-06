@@ -68,6 +68,38 @@ header{
     padding: 10px;
 }
 
+.coursedetail{
+    width: 206px;
+    height: 31.076px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 15px;
+    background: #428749;
+
+}
+
+.lessonde{
+    width: 206px;
+    height: 30px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 15px;
+    background: #428749;
+
+}
+
 .back{
     width: 49.732px;
     height: 100px;
