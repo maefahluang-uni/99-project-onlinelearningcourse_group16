@@ -8,7 +8,7 @@
 }
 
 .contain{
-    max-width: 1280px;
+    max-width: 50000px;
     height: 1741px;
     margin: 0 auto;
     border: 1px solid rgb(253, 156, 245);
@@ -32,6 +32,8 @@ intro{
     display: flex;
     margin-right: 41.79px;
     border: 1px solid red;
+    align-items: flex-end;
+    padding: 10px;
 }
 
 .introduction{
@@ -41,6 +43,13 @@ intro{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-right: 20px;
+}
+
+deja{
+    display: flex;
+    padding: 10px;
+
 }
 
 .lessonhour{
@@ -50,6 +59,7 @@ intro{
     flex-shrink: 0;
     border-radius: 15px;
     background: #E3E3E3;
+    margin-right: 20px;
 }
 
 .minja{
@@ -61,11 +71,45 @@ intro{
     background: #E3E3E3;
 }
 
+content{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     border: 1px saddlebrown;
     padding: 10px;
+}
+
+.clip{
+    margin-right: 103px;
+}
+
+.containcontent{
+    width: 282px;
+    height: 558px;
+    margin-left: auto;
+    border-radius: var(--Forms-radius, 20px);
+    background: #F8FAEC;
+
+}
+
+.coursecontent{
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    border-radius: 2rem;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 1.9rem 1.4rem 9.5rem 1.7rem;
+    
 }
 
 .coursedetail{
@@ -81,6 +125,7 @@ header{
     line-height: normal;
     border-radius: 15px;
     background: #428749;
+
 
 }
 
@@ -107,11 +152,4 @@ header{
     
 }
 
-.subject{
-    color: #000;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
+
