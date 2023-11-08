@@ -91,12 +91,12 @@ header{
 
 .containerclip{
     align-items: center;
-    width: 1500;
+    width: 1000;
     height: 300;
     display: grid;
     gap: 15px;
     align-items: flex-start;
-    padding: 5px 5%;
+    padding: 1px 3%;
     border: 1px solid rgb(128, 0, 255);
     display: flex;
 }
@@ -154,9 +154,6 @@ header{
 
 }
 
-.vid1{
-    padding: ;
-}
 
 .containcontent{
     width: 282px;
@@ -164,7 +161,7 @@ header{
     margin-left: auto;
     border-radius: var(--Forms-radius, 20px);
     background: #F8FAEC;
-    
+    display: flex;
 
 }
 
@@ -216,44 +213,12 @@ header{
 
 }
 
-.clip1intro{
-    display: flex;
-    margin-left: 30px;
-
-}
-.clip1{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.clip2{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.clip3{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
 .clipsubject{
     color: #000;
     font-family: Inter;
     font-size: 8px;
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    margin-left: 10px;
-    }
-.clipname{
-    color: #000;
-    font-family: Inter;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 600;
     line-height: normal;
     margin-left: 10px;
     }
