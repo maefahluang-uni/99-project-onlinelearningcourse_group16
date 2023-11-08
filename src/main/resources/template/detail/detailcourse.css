@@ -84,8 +84,78 @@ header{
     padding: 10px;
 }
 
-.clip{
+.main-clip{
+    size: 20%;
     margin-right: 103px;
+}
+
+.containerclip{
+    align-items: center;
+    width: 1500;
+    height: 300;
+    display: grid;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+    border: 1px solid rgb(128, 0, 255);
+    display: flex;
+}
+
+
+.containerclip .main-clip{
+    background: rgb(42, 46, 44);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.containerclip .main-clip videoja{
+    width: auto;
+    height: 37.4px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    padding: 1000px;
+}
+
+
+.containerclip .main-clip .title{
+    color: rgb(207, 229, 208);
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.containerclip .video-list{
+    border-radius: 5px;
+    overflow-y: scroll;
+    width: 282px;
+    height: 558px;
+    margin-left: auto;
+    border-radius: var(--Forms-radius, 20px);
+    background: #F8FAEC;
+}
+
+.video-list::-webkit-scrollbar{
+    width: 7px;
+}
+
+.video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius: 50px;
+}
+
+.video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+
+.vid1 video{
+    width: 100px;
+    border-radius: 5px;
+
+}
+
+.vid1{
+    padding: ;
 }
 
 .containcontent{
@@ -108,7 +178,7 @@ header{
     border-radius: 2rem;
     flex-direction: column;
     flex-shrink: 0;
-    padding: 1.9rem 1.4rem 9.5rem 1.7rem;
+    padding: 1.9rem 1.4rem 1.5rem 1.7rem;
     
 }
 
@@ -142,6 +212,59 @@ header{
     line-height: normal;
     border-radius: 15px;
     background: #428749;
+
+}
+
+.clip1intro{
+    display: flex;
+    margin-left: 30px;
+
+}
+.clip1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.clip2{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.clip3{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.clipsubject{
+    color: #000;
+    font-family: Inter;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 10px;
+    }
+.clipname{
+    color: #000;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 10px;
+    }
+
+
+.allldetail{
+    border: 1px solid red;
+    width: 773px;
+    height: 722px;
+    flex-shrink: 0;
+    background: #FFF;
+    align-items: center;
 
 }
 
