@@ -183,7 +183,7 @@
             font-family: Inter, 'Source Sans Pro';
             font-size: 0.9rem;
             font-weight: 400;
-            height: calc(% - 0rem);
+            height: calc(0 - 0rem);
             justify-content: center;
             line-height: 1.2125;
             margin-bottom: 0rem;
@@ -352,7 +352,7 @@
         }
       }
     }
-  }
+  
   .auto-group-dpgd-dWZ {
     display: flex;
     flex-direction: column;
@@ -603,4 +603,4 @@
       }
     }
   }
-
+}
