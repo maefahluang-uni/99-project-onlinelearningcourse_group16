@@ -19,7 +19,7 @@ public class UserController {
     @RequestMapping("/login")
     public String login() {
         model.addAttributes("user",user);
-        
+        kljlkm
         return "newlogin"
 
     }
