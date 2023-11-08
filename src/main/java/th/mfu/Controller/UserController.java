@@ -12,6 +12,7 @@ public class UserController {
     @GetMapping
     @RequestMapping("/login")
     public String login() {
+        model.addAttributes("user",user);
         return "newlogin"
 
     }
