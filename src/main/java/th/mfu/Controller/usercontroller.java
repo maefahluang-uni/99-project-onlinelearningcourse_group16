@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 
-public class UserController {
+public class usercontroller {
     @RequestMapping("/login")
     public String login() {
         return "login ";
