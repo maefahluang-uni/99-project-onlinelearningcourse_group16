@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class UserController {
+
+    // user allow to get new path
     @GetMapping
     @RequestMapping("/login")
     public String login() {
         model.addAttributes("user",user);
+        
         return "newlogin"
 
     }
