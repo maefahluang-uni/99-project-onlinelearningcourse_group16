@@ -10,4 +10,4 @@ Pimpha      Wongpracha    6531503059
 Phetcharat  Singhattha    6531503061
 
 
-ืืืnnnn
+ืืืnnnnl
