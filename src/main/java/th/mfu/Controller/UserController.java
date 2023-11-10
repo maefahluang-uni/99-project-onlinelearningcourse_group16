@@ -24,5 +24,6 @@ public class UserController {
         UserRepository.save(user);
         model.addAttribute("message", "submit");
         return "register";
+        // lskadm
     }
 }
