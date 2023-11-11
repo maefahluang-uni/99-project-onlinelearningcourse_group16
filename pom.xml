@@ -80,7 +80,7 @@
         <groupId>com.google.cloud</groupId>
         <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
     </dependency>  -->
-    
+
 
 
 
@@ -108,8 +108,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <source>${java.version}</source> 
-                    <target>${java.version}</target>   
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
         </plugins>
