@@ -2,6 +2,7 @@ package th.mfu.auth;
 
 public class EzLearningUserDetailsService {
 
+
     public class EzLearningUserDetailsService implements UserDetailsService {
 
         private final UserRepository userRepository;
