@@ -1,6 +1,7 @@
 package th.mfu.auth;
 
 
+public class UserPrincipal implements UserDetails {
 
     private User user;
     private List<AuthGroup> authGroups;
