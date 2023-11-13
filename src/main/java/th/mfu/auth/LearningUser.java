@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import th.mfu.AuthGroupRepository;
 
-public class LearningUserService implements UserDetailsService {
+
 
 
 public class LearningUser implements UserDetailsService {
@@ -19,8 +19,12 @@ public class LearningUser implements UserDetailsService {
         private final AuthGroupRepository authGroupRepository;
 
 
-        public LearningUserService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+       
 
+        /**
+         * @param userRepository
+         * @param authGroupRepository
+         */
         public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
 
             super();
@@ -28,7 +32,7 @@ public class LearningUser implements UserDetailsService {
             this.authGroupRepository = authGroupRepository;
 
 
-            public UserDetails loadUserByUsername (String username) throws UsernameNotFoundException {
+            public UserDetails loadUserByUsername (String username) throw UsernameNotFoundException {
                 User user = this.userRepository.findByUsername(username);
                 if (user == null) {
                     throw new UsernameNotFoundException("UserName not found:" + username);
@@ -36,8 +40,9 @@ public class LearningUser implements UserDetailsService {
                 List<AuthGroup> authGroups = this.authGroupRepository.findByUsername(username);
                 return new UserPrincipal(user, authGroups);
             }
+            
            
-        }
+        
 
         @Override
         public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -45,5 +50,15 @@ public class LearningUser implements UserDetailsService {
             throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
         }
     }
+
+
+
+
+        @Override
+        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
+        }
+}
 
 
