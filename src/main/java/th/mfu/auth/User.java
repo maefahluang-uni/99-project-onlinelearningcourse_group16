@@ -6,7 +6,7 @@ public class User {
     private long id;
     private String username;
 
-//sakdla
+
     private String password;
     private String name;
 
