@@ -19,6 +19,7 @@ public class UserController {
         model.addAttribute("userDto", new UserDto());
         return "register";
     }
+    //
 
     @PostMapping(value = "/register")
     public String saveUser(UserDto userDto, Model model) {
