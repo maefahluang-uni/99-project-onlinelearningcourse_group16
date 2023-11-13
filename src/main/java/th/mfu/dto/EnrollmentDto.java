@@ -18,4 +18,5 @@ public class EnrollmentDto {
         this.user = user;
         this.course = course;
     }
+    //
 }
