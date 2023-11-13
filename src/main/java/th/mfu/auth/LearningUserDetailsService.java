@@ -16,11 +16,11 @@ public class LearningUser implements UserDetailsService {
         private final UserRepository userRepository;
         private final AuthGroupRepository authGroupRepository;
 
-<<<<<<<< HEAD:src/main/java/th/mfu/auth/LearningUserDetailsService.java
+ HEAD:src/main/java/th/mfu/auth/LearningUserDetailsService.java
         public LearningUserDetailsService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
 ========
         public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
->>>>>>>> 5e90eabfcaada4b4169f94f73c5ef6cfe5b75ff4:src/main/java/th/mfu/auth/LearningUser.java
+
             super();
             this.userRepository = userRepository;
             this.authGroupRepository = authGroupRepository;
