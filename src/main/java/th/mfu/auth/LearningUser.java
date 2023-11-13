@@ -1,13 +1,14 @@
 package th.mfu.auth;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-public class EzLearningUserDetailsService implements UserDetailsService {
+public class LearningUser implements UserDetailsService {
 
         private final UserRepository userRepository;
         private final AuthGroupRepository authGroupRepository;
 
-        public EzLearningUserDetailsService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
             super();
             this.userRepository = userRepository;
             this.authGroupRepository = authGroupRepository;
@@ -21,7 +22,7 @@ public class EzLearningUserDetailsService implements UserDetailsService {
                 List<AuthGroup> authGroups = this.authGroupRepository.findByUsername(username);
                 return new UserPrincipal(user, authGroups);
             }
-            //
+           
         }
     }
 
