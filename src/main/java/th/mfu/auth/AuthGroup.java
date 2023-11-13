@@ -1,5 +1,7 @@
 package th.mfu.auth;
 
+
+
 public class AuthGroup {
 
     private long id;
