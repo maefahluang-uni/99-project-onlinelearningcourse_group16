@@ -31,10 +31,11 @@ public class LearningUser implements UserDetailsService {
             this.authGroupRepository = authGroupRepository;
 
         @Override
-        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        public UserDetails loadUserByUsername(String username) throw UsernameNotFoundException {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
         }
+    
     }
 }
 
