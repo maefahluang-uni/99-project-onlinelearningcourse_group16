@@ -3,6 +3,7 @@ package th.mfu.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.token.TokenService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -93,7 +94,7 @@ public class TutorController {
         try {
             Tutor current = tutorRepository.findById(tutorId).get();
             current.setTutorDetail(tutor.getTutorDetail());
-            tutorService.patch(current);
+            TokenService.patch(current);
 
             attributes.addAttribute("tutorId", tutorId);
             return "redirect:/tutors/{tutorId}";
