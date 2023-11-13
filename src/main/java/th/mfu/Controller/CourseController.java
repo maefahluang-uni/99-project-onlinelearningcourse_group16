@@ -50,7 +50,7 @@ public class CourseController {
     public String addCourse(@PathVariable Long tutorId, Model model) {
         try {
             Tutor current = tutorRepository.findById(tutorId).get();
-            model.addAttribute("course", new CourseDto());
+            model.addAttribute("course", new CourseDto(null, null, null, null, null, null, current));
             model.addAttribute("tutor", current);
             return "courses/course-add";
         } catch (Exception e) {

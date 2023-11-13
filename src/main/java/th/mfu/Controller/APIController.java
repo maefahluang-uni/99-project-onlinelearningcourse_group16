@@ -22,18 +22,17 @@ public class APIController {
 
     @Autowired
     public APIController(ToturService tutorService, CourseService courseService) {
-        super();
         this.tutorService = tutorService;
         this.courseService = courseService;
     }
 
     @GetMapping("/tutors")
     public List<Tutor> getAllTutors() { 
-        return this.tutorService.getAll(); 
+        return tutorService.getAll(); 
     }
 
     @GetMapping("/courses")
     public List<Course> getAllCourses() {
-        return this.courseService.getAll();
+        return courseService.getAll();
     }
 }
