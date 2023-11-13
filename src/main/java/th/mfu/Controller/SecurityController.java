@@ -9,15 +9,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import th.mfu.Repository.EmrollmentRepository;
+import th.mfu.auth.UserRepository;
+
 import java.util.List;
 
 @Controller
 @PreAuthorize("hasRole('ROLE_USER')")
-@AllArgsConstructor
 public class SecurityController {
 
     private final UserRepository userRepository;
-    private final EnrollmentRepository enrollmentRepository;
+    private final EmrollmentRepository enrollmentRepository;
     private final UserService userService;
 
     @GetMapping("/profile")
