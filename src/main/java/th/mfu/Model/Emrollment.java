@@ -19,11 +19,6 @@ public class Emrollment {
     }
 
 
-    public void setEnrollmentId(Long enrollmentId) {
-        this.enrollmentId = enrollmentId;
-    }
-
-
 
     public void setEnrollmentDate(LocalDate enrollmentDate) {
         this.enrollmentDate = enrollmentDate;
@@ -43,6 +38,9 @@ public class Emrollment {
 
     public void setCourse(Course course) {
         this.course = course;
+    }
+        public LocalDate getEnrollmentDate() {
+        return enrollmentDate;
     }
 
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
 import th.mfu.service.imp.CourseService;
+import th.mfu.service.imp.ToturService;
 
 import java.util.List;
 
@@ -16,18 +17,20 @@ import java.util.List;
 @RequestMapping("/api")
 public class APIController {
 
-    private TutorService tutorService;
+    private ToturService tutorService;
     private CourseService courseService;
 
     @Autowired
-    public APIController(TutorService tutorService, CourseService courseService) {
+    public APIController(ToturService tutorService, CourseService courseService) {
         super();
         this.tutorService = tutorService;
         this.courseService = courseService;
     }
 
     @GetMapping("/tutors")
-    public List<Tutor> getAllTutors() { return this.tutorService.getAll(); }
+    public List<Tutor> getAllTutors() { 
+        return this.tutorService.getAll(); 
+    }
 
     @GetMapping("/courses")
     public List<Course> getAllCourses() {

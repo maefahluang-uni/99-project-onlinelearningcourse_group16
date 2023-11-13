@@ -10,6 +10,7 @@ public class CourseDto {
     private String url;
     private String imgUrl;
     private Tutor tutor;
+
     public CourseDto(String courseName, String courseDescription, String difficulty, String detail, String url, String imgUrl, Tutor tutor) {
         this.courseName = courseName;
         this.courseDescription = courseDescription;
@@ -19,21 +20,51 @@ public class CourseDto {
         this.imgUrl = imgUrl;
         this.tutor = tutor;
     }
+
+
     public String getCourseName() {
-        return null;
+        return courseName;
+    }
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
     public String getCourseDescription() {
-        return null;
+        return courseDescription;
     }
-    public String getDetail() {
-        return null;
+    public void setCourseDescription(String courseDescription) {
+        this.courseDescription = courseDescription;
     }
     public String getDifficulty() {
-        return null;
+        return difficulty;
+    }
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+    public String getDetail() {
+        return detail;
+    }
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+    public String getUrl() {
+        return url;
+    }
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    public String getImgUrl() {
+        return imgUrl;
+    }
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
     public Tutor getTutor() {
-        return null;
+        return tutor;
     }
-    public void setTutor(Tutor current) {
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
     }
+
+   
+    
 }
