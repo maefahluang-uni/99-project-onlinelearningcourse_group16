@@ -21,6 +21,7 @@ public class ToturService {
         } else if (null != userRepository.findByEmail(userDto.getEmail())) {
             throw new IllegalStateException("There is already a userName with the email " + userDto.getEmail());
         }
+        
         String username = userDto.getUsername();
         String password = new BCryptPasswordEncoder(11).encode(userDto.getPassword());
         String name = userDto.getName();
@@ -58,5 +59,4 @@ public class ToturService {
 
         userRepository.save(current);
     }
-}
 }
