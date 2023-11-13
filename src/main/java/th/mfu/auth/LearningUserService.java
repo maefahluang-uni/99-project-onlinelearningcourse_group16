@@ -9,19 +9,17 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import th.mfu.AuthGroupRepository;
 
+
+
 public class LearningUserService implements UserDetailsService {
-
-
-public class LearningUser implements UserDetailsService {
 
 
         private final UserRepository userRepository;
         private final AuthGroupRepository authGroupRepository;
 
 
-        public LearningUserService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
 
-        public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        public LearningUserService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
 
             super();
             this.userRepository = userRepository;
@@ -45,5 +43,7 @@ public class LearningUser implements UserDetailsService {
             throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
         }
     }
+
+
 
 
