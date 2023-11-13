@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import th.mfu.Model.Emrollment;
 import th.mfu.Repository.EmrollmentRepository;
+import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
+import th.mfu.service.imp.UserService;
 
 import java.util.List;
 
@@ -27,7 +30,7 @@ public class SecurityController {
         try {
             String currentUsername = authentication.getName();
             User user = userRepository.findByUsername(currentUsername);
-            List<Enrollment> enrollments = enrollmentRepository.findAllByUserName(user);
+            List<Emrollment> enrollments = enrollmentRepository.findAllByUserName(user);
             int numCourses = enrollments.size();
             model.addAttribute("user", user);
             model.addAttribute("enrollments", enrollments);
@@ -69,7 +72,6 @@ public class SecurityController {
                 current.setName(user.getName());
                 current.setSurname(user.getSurname());
                 current.setEmail(user.getEmail());
-                current.setImgUrl(user.getImgUrl());
                 userService.update(current);
 
                 return "redirect:/profile";
