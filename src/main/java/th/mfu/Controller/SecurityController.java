@@ -1,13 +1,6 @@
 package th.mfu.Controller;
 
-package com.elearning.platform.controller;
 
-import com.elearning.platform.auth.User;
-import com.elearning.platform.auth.UserRepository;
-import com.elearning.platform.model.Enrollment;
-import com.elearning.platform.repositories.EnrollmentRepository;
-import com.elearning.platform.services.core.impl.UserService;
-import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
