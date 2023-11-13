@@ -3,17 +3,13 @@ package th.mfu.service.imp;
 import java.time.LocalDate;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
 
 import th.mfu.AuthGroupRepository;
 import th.mfu.auth.AuthGroup;
-import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.UserDto;
 
-
-@Service
-public class UserService {
+public class ToturService {
     private final UserRepository userRepository;
     private final AuthGroupRepository authGroupRepository;
 
@@ -33,7 +29,7 @@ public class UserService {
         log.info("about to upload");
         String imgUrl = userDto.getImgUrl();
         LocalDate date = LocalDate.now();
-        User user = new User(username, password, name, surname, email, date);
+        User user = new User(username, password, name, surname, email, imgUrl, date);
         AuthGroup group = new AuthGroup();
 
         group.setUsername(userDto.getUsername());
@@ -49,6 +45,7 @@ public class UserService {
         current.setName(user.getName());
         current.setSurname(user.getUsername());
         current.setEmail(user.getEmail());
+        current.setImgUrl(user.getImgUrl());
 
         userRepository.save(current);
     }
@@ -60,5 +57,5 @@ public class UserService {
 
         userRepository.save(current);
     }
-
+}
 }

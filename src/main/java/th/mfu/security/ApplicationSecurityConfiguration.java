@@ -21,7 +21,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private EzLearningUserDetailsService userDetailsService;
+    private LearningUserService userDetailsService;
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {

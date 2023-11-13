@@ -1,13 +1,17 @@
 package th.mfu.auth;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-public class EzLearningUserDetailsService implements UserDetailsService {
+import th.mfu.AuthGroupRepository;
+
+public class LearningUserDetailsService implements UserDetailsService {
 
         private final UserRepository userRepository;
         private final AuthGroupRepository authGroupRepository;
 
-        public EzLearningUserDetailsService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        public LearningUserDetailsService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
             super();
             this.userRepository = userRepository;
             this.authGroupRepository = authGroupRepository;
@@ -22,6 +26,12 @@ public class EzLearningUserDetailsService implements UserDetailsService {
                 return new UserPrincipal(user, authGroups);
             }
             //
+        }
+
+        @Override
+        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
         }
     }
 
