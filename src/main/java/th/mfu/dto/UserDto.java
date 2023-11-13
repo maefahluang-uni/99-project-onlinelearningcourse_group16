@@ -12,7 +12,7 @@ public class UserDto {
     private String email;
 
 
-    public UserDto(String username, String password, String name, String surname, String email) {
+    public UserDto() {
         this.username = username;
         this.password = password;
         this.name = name;
