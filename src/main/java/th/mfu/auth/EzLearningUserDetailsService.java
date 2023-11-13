@@ -1,8 +1,4 @@
 package th.mfu.auth;
-
-public class EzLearningUserDetailsService {
-
-
     public class EzLearningUserDetailsService implements UserDetailsService {
 
         private final UserRepository userRepository;
@@ -13,7 +9,7 @@ public class EzLearningUserDetailsService {
             this.userRepository = userRepository;
             this.authGroupRepository = authGroupRepository;
 
-            @Override
+
             public UserDetails loadUserByUsername (String username) throws UsernameNotFoundException {
                 User user = this.userRepository.findByUsername(username);
                 if (user == null) {
@@ -24,6 +20,5 @@ public class EzLearningUserDetailsService {
             }
         }
     }
-}
-//xcvxcvxcv
-//123456
+
+
