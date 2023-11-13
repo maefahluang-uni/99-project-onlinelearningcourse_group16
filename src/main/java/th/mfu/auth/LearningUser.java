@@ -11,7 +11,7 @@ import th.mfu.AuthGroupRepository;
 
 
 
-public class LearningUserService implements UserDetailsService {
+public class LearningUser implements UserDetailsService {
 
 
         private final UserRepository userRepository;
@@ -19,7 +19,7 @@ public class LearningUserService implements UserDetailsService {
 
 
 
-        public LearningUserService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
 
             super();
             this.userRepository = userRepository;
