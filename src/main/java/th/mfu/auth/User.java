@@ -23,7 +23,7 @@ public class User {
         this.surname = surname;
         this.date = date;
     }
-    public User(String detail) {
+    public User(String detail, String password2, String name2, String surname2, String email, LocalDate date2) {
         this.detail = detail;
     }
 
@@ -73,6 +73,11 @@ public class User {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+    public Object getEmail() {
+        return null;
+    }
+    public void setEmail(Object email) {
     }
 
 }
