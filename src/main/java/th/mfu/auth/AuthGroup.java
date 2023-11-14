@@ -8,14 +8,26 @@ public class AuthGroup {
     private String username;
     private String authgroup;
 
+   
     public AuthGroup() {
         this.username = username;
         this.authgroup = authgroup;
     }
-
-    public void setUsername(String username2) {
+        
+     public String getUsername() {
+        return username;
     }
 
-    public void setAuthgroup(String string) {
+    public void setUsername(String username) {
+        this.username = username;
     }
+
+    public String getAuthgroup() {
+        return authgroup;
+    }
+
+    public void setAuthgroup(String authgroup) {
+        this.authgroup = authgroup;
+    }
+
 }
