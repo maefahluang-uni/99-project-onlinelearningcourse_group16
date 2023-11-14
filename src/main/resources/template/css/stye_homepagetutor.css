@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+contain{
+    max-width: 5000px;
+    height: 1741px;
+    margin: 10px auto;
+}
+
+.navbar{
+    width: 1440px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #00001D;
+}
+
+.headerja{
+    padding: 10px;
+    display: flex;
+}
+
+.logo{
+    margin-left: 80px;
+}
+
+.ringring{
+    margin-top: 25px;
+    margin-left: 1000px;
+}
+
+.profile{
+    margin-left: 30px;
+    margin-top: 13.5px;
+}
+
+.auto-group-9efs-8uf{
+  display: flex;
+  margin: 120px;
+  justify-content: space-between;
+}
+
+.addcourse{
+    width: 277.794px;
+    height: 266.59px;
+    flex-shrink: 0;
+    border-radius: var(--Forms-radius, 20px);
+    border: 1px solid #000;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 90px;
+    text-align: center;
+}
+
+.addcoursee h1{
+  color: rgba(0, 0, 0, 0.58);
+  text-align: center;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.containcourse  {
+  width: 277.794px;
+  height: 266.59px;
+  flex-shrink: 0;
+  border-radius: var(--Forms-radius, 20px);
+  background: #ffffff;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 7.2px;
+}
+
+.lessonhour{
+  display: flex;
+}
+
+.auto-group-afmt-t3b{
+  display: flex;
+  bottom: 0;
+}
+
+.delete{
+  position: relative;
+  left: 230px;
+  bottom: 50px;
+}
+
+
+.row2{
+  display: flex;
+  margin: 120px;
+  justify-content: space-between;
+}
+
+.containleshour{
+  width: 63px;
+  height: 13px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #E3E3E3;
+  margin-right: 8px;
+  margin-bottom: 7px;
+}
+
+.how-many-lesson--4RF{
+  width: 46.563px;
+  height: 11px;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 9px;
+  margin-top: 1px;
+}
+
+.how-many-hour-VWZ{
+  width: 46.563px;
+  height: 11px;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 9px;
+  margin-top: 1px;
+}
+
+.baht-lifetime-Jd7-sub-0{
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.title{
+  width: 98px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 13px;
+}
