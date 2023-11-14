@@ -12,6 +12,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import th.mfu.Model.Course;
+import th.mfu.Model.Tutor;
+import th.mfu.Repository.CourseRepository;
+import th.mfu.Repository.EmrollmentRepository;
+import th.mfu.Repository.TutorRepository;
+import th.mfu.auth.User;
+import th.mfu.auth.UserRepository;
+import th.mfu.dto.CourseDto;
+import th.mfu.service.imp.CourseService;
+
 import java.util.List;
 
 @Controller
@@ -20,13 +30,13 @@ public class CourseController {
 
     private CourseService courseService;
     private CourseRepository courseRepository;
-    private EnrollmentRepository enrollmentRepository;
+    private EmrollmentRepository enrollmentRepository;
     private UserRepository userRepository;
     private TutorRepository tutorRepository;
 
     @Autowired
     public CourseController(CourseService courseService, CourseRepository courseRepository,
-                            EnrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
+                            EmrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
         super();
         this.courseService = courseService;
         this.courseRepository = courseRepository;
@@ -40,7 +50,7 @@ public class CourseController {
     public String addCourse(@PathVariable Long tutorId, Model model) {
         try {
             Tutor current = tutorRepository.findById(tutorId).get();
-            model.addAttribute("course", new CourseDto());
+            model.addAttribute("course", new CourseDto(null, null, null, null, null, null, current));
             model.addAttribute("tutor", current);
             return "courses/course-add";
         } catch (Exception e) {

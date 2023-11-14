@@ -16,18 +16,19 @@ import th.mfu.Model.Tutor;
 import th.mfu.Repository.CourseRepository;
 import th.mfu.Repository.TutorRepository;
 import th.mfu.dto.TutorDto;
+import th.mfu.service.imp.ToturService;
 
 import java.util.List;
 
 @Controller
 @RequestMapping("/tutors")
 public class TutorController {
-    private TutorService tutorService;
+    private ToturService tutorService;
     private TutorRepository tutorRepository;
     private CourseRepository courseRepository;
 
     @Autowired
-    public TutorController(TutorService tutorService, TutorRepository tutorRepository,
+    public TutorController(ToturService tutorService, TutorRepository tutorRepository,
                            CourseRepository courseRepository) {
         this.tutorService = tutorService;
         this.tutorRepository = tutorRepository;
@@ -137,4 +138,3 @@ public class TutorController {
 
     }
 }
-//lmm

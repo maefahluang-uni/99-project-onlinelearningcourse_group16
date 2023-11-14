@@ -5,14 +5,20 @@ import java.time.LocalDate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import th.mfu.AuthGroupRepository;
+import th.mfu.Model.Tutor;
 import th.mfu.auth.AuthGroup;
-
+import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.UserDto;
 
 public class ToturService {
     private final UserRepository userRepository;
     private final AuthGroupRepository authGroupRepository;
+
+    public ToturService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        this.userRepository = userRepository;
+        this.authGroupRepository = authGroupRepository;
+    }
 
     public void createUser(UserDto userDto) throws IllegalStateException {
 
@@ -21,16 +27,15 @@ public class ToturService {
         } else if (null != userRepository.findByEmail(userDto.getEmail())) {
             throw new IllegalStateException("There is already a userName with the email " + userDto.getEmail());
         }
+        
         String username = userDto.getUsername();
         String password = new BCryptPasswordEncoder(11).encode(userDto.getPassword());
         String name = userDto.getName();
         String surname = userDto.getSurname();
         String email = userDto.getEmail();
-        log.info("Getting image");
-        log.info("about to upload");
-        String imgUrl = userDto.getImgUrl();
+
         LocalDate date = LocalDate.now();
-        User user = new User(username, password, name, surname, email, imgUrl, date);
+        User user = new User(username, password, name, surname, email, date);
         AuthGroup group = new AuthGroup();
 
         group.setUsername(userDto.getUsername());
@@ -40,13 +45,13 @@ public class ToturService {
         authGroupRepository.save(group);
     }
 
-    public void update(User user) {
-        User current = userRepository.findByUsername(user.getUsername());
+    public void update(Tutor tutor) {
+        User current = userRepository.findByUsername(tutor.getUsername());
 
-        current.setName(user.getName());
-        current.setSurname(user.getUsername());
-        current.setEmail(user.getEmail());
-        current.setImgUrl(user.getImgUrl());
+        current.setName(tutor.getName());
+        current.setSurname(tutor.getUsername());
+        current.setEmail(tutor.getEmail());
+        current.setImgUrl(tutor.getImgUrl());
 
         userRepository.save(current);
     }
@@ -58,5 +63,4 @@ public class ToturService {
 
         userRepository.save(current);
     }
-}
 }

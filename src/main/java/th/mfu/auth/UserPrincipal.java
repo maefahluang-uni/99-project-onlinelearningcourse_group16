@@ -1,13 +1,14 @@
 package th.mfu.auth;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-
-
 
 public class UserPrincipal implements UserDetails {
 
@@ -15,7 +16,9 @@ public class UserPrincipal implements UserDetails {
     private List<AuthGroup> authGroups;
 
     public UserPrincipal(User user, List<AuthGroup> authGroups) {
-        super();
+        if (user == null || authGroups == null) {
+            throw new IllegalArgumentException("User and authGroups cannot be null");
+        }
         this.user = user;
         this.authGroups = authGroups;
     }
@@ -27,38 +30,47 @@ public class UserPrincipal implements UserDetails {
         }
         Set<SimpleGrantedAuthority> grantedAuthorities = new HashSet<>();
         authGroups.forEach(group -> {
-            grantedAuthorities.add(new SimpleGrantedAuthority(group.getAuthgroup()));
+           
+            grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_" + group.getAuthgroup()));
         });
         return grantedAuthorities;
     }
 
     @Override
     public String getPassword() {
-        return this.user.getPassword();
+       
+        throw new UnsupportedOperationException("Unimplemented method 'getPassword'");
     }
 
     @Override
     public String getUsername() {
-        return this.user.getUsername();
+  
+        throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;
+
+        throw new UnsupportedOperationException("Unimplemented method 'isAccountNonExpired'");
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+
+        throw new UnsupportedOperationException("Unimplemented method 'isAccountNonLocked'");
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
+ 
+        throw new UnsupportedOperationException("Unimplemented method 'isCredentialsNonExpired'");
     }
 
     @Override
     public boolean isEnabled() {
-        return true;
+    
+        throw new UnsupportedOperationException("Unimplemented method 'isEnabled'");
     }
+
+
 }
