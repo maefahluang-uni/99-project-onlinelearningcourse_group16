@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import th.mfu.dto.UserDto;
+import th.mfu.service.imp.UserService;
 
 
 @Controller
@@ -19,7 +20,7 @@ public class UserController {
         model.addAttribute("userDto", new UserDto());
         return "register";
     }
-    //uigi
+    
 
     @PostMapping(value = "/register")
     public String saveUser(UserDto userDto, Model model) {
