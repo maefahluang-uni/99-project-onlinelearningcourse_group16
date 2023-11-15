@@ -60,6 +60,10 @@ public class UserDto {
         this.email = email;
     }
 
+    public String getImgUrl() {
+        return null;
+    }
+
 
 
 }

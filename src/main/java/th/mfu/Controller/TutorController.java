@@ -95,7 +95,7 @@ public class TutorController {
         try {
             Tutor current = tutorRepository.findById(tutorId).get();
             current.setTutorDetail(tutor.getTutorDetail());
-            TokenService.patch(current);
+            tutorService.patch(current);
 
             attributes.addAttribute("tutorId", tutorId);
             return "redirect:/tutors/{tutorId}";

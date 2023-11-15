@@ -10,6 +10,7 @@ import th.mfu.Model.Tutor;
 import th.mfu.auth.AuthGroup;
 import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
+import th.mfu.dto.TutorDto;
 import th.mfu.dto.UserDto;
 
 public class ToturService {
@@ -37,7 +38,7 @@ public class ToturService {
 
         LocalDate date = LocalDate.now();
         User user = new User(username, password, name, surname, email, date);
-        AuthGroup group = new AuthGroup();
+        AuthGroup group = new AuthGroup(email, email);
 
         group.setUsername(userDto.getUsername());
         group.setAuthgroup("USER");
@@ -57,10 +58,10 @@ public class ToturService {
         userRepository.save(current);
     }
 
-    public void patch(User user) {
-        User current = userRepository.findByUsername(user.getUsername());
+    public void patch(Tutor current2) {
+        User current = userRepository.findByUsername(current2.getUsername());
 
-        current.setDetail(user.getDetail());
+        current.setEmail(current2.getEmail());
 
         userRepository.save(current);
     }
@@ -70,5 +71,8 @@ public class ToturService {
 
     public List<Tutor> getAll() {
         return null;
+    }
+
+    public void create(TutorDto tutor) {
     }
 }
