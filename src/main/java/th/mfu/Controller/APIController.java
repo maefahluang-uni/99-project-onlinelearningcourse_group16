@@ -28,11 +28,11 @@ public class APIController {
 
     @GetMapping("/tutors")
     public List<Tutor> getAllTutors() { 
-        return tutorService.getAll(); 
+        return this.tutorService.getAll(); 
     }
 
     @GetMapping("/courses")
     public List<Course> getAllCourses() {
-        return courseService.getAll();
+        return this.courseService.getAll();
     }
 }

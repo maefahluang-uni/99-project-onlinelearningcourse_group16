@@ -8,6 +8,8 @@ import th.mfu.auth.AuthGroup;
 
 public interface  AuthGroupRepository extends JpaRepository<AuthGroup, Long>{
     List<AuthGroup> findByUsername(String username);
+
+    List<String> findAuthoritiesByUsername(String username);
    
 
 }

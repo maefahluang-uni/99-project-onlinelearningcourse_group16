@@ -1,6 +1,7 @@
 package th.mfu.service.imp;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -62,5 +63,12 @@ public class ToturService {
         current.setDetail(user.getDetail());
 
         userRepository.save(current);
+    }
+
+    public void delete(Tutor tutorActual) {
+    }
+
+    public List<Tutor> getAll() {
+        return null;
     }
 }
