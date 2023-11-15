@@ -22,9 +22,9 @@ import java.util.List;
 
 public class SecurityController {
 
-    private final UserRepository userRepository;
-    private final EmrollmentRepository enrollmentRepository;
-    private final UserService userService;
+    private  UserRepository userRepository;
+    private  EmrollmentRepository enrollmentRepository;
+    private  UserService userService;
 
     @GetMapping("/profile")
     public String getUserProfile(Authentication authentication, Model model) {

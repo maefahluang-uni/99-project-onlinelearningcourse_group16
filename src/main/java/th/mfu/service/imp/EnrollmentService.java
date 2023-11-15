@@ -5,17 +5,19 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import th.mfu.Model.Course;
+import th.mfu.Model.Emrollment;
 import th.mfu.Repository.CourseRepository;
+import th.mfu.Repository.EmrollmentRepository;
 import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 
 public class EnrollmentService {
-     private EnrollmentRepository enrollmentRepository;
+     private EmrollmentRepository enrollmentRepository;
     private CourseRepository courseRepository;
     private UserRepository userRepository;
 
     @Autowired
-    public EnrollmentService(EnrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
+    public EnrollmentService(EmrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
         this.enrollmentRepository = enrollmentRepository;
         this.courseRepository = courseRepository;
         this.userRepository = userRepository;
@@ -29,7 +31,7 @@ public class EnrollmentService {
             throw new Exception("You already enrolled in this course");
         }
         LocalDate date = LocalDate.now();
-        Enrollment enrollment = new Enrollment(date, user, course);
+        Emrollment enrollment = new Emrollment(date, user, course);
         enrollmentRepository.save(enrollment);
     }
 }
