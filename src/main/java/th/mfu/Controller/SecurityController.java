@@ -19,6 +19,7 @@ import java.util.List;
 
 @Controller
 @PreAuthorize("hasRole('ROLE_USER')")
+
 public class SecurityController {
 
     private final UserRepository userRepository;

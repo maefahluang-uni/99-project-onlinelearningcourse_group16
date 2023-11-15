@@ -2,7 +2,12 @@ package th.mfu.auth;
 
 import java.time.LocalDate;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 public class User {
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
 
