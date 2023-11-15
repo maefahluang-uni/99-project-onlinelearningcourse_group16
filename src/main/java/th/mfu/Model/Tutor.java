@@ -53,4 +53,11 @@ public class Tutor {
         this.tutorDetail = tutorDetail;
     }
 
+    public Object getTutorDescription() {
+        return null;
+    }
+
+    public void setTutorDescription(Object tutorDescription) {
+    }
+
 }
