@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="css/stye_homepagetutor.css">
 
     <script>
-        function togglePop() {
-            let popup = document.getElementById('popAlert','popAlert1','popAlert2');
-            popup.classList.toggle('active');
+        window.onload = function() {
+            const showPopup = document.querySelectorAll('.bg button');
+            const popupContainers = document.querySelectorAll('.popAlert');
+
+            showPopup.forEach((popup, index) => {
+                popup.onclick = () => {
+                    popupContainers[index].classList.toggle('active');
+                }
+            });
+
+            const closeBtns = document.querySelectorAll('.popAlert button');
+            closeBtns.forEach((closeBtn) => {
+                closeBtn.onclick = () => {
+                    popupContainers.forEach((popup) => {
+                        popup.classList.remove('active');
+                    });
+                }
+            });
         }
     </script>
 
@@ -70,7 +85,7 @@
                     </div>
                     <div class="delete">
                         <popupdelete>
-                            <section id="bg">
+                            <section class="bg">
                                 <button type="button" onclick="togglePop()">
                                     <a href="#">
                                         <img src="pic/emoji%20_delete_.svg" alt="">
@@ -78,7 +93,7 @@
                                 </button>
                             </section>
 
-                            <section id="popAlert">
+                            <section class="popAlert">
                                 <aside>
                                     <h2>Are you sure to delete course?</h2>
                                     <button type="button" onclick="togglePop()">Cancle</button>
@@ -110,7 +125,7 @@
                     </div>
                     <div class="delete">
                         <popupdelete>
-                            <section id="bg1">
+                            <section class="bg">
                                 <button type="button" onclick="togglePop()">
                                     <a href="#">
                                         <img src="pic/emoji%20_delete_.svg" alt="">
@@ -118,7 +133,7 @@
                                 </button>
                             </section>
 
-                            <section id="popAlert1">
+                            <section class="popAlert">
                                 <aside>
                                     <h2>Are you sure to delete course?</h2>
                                     <button type="button" onclick="togglePop()">Cancle</button>
@@ -152,7 +167,7 @@
                     </div>
                     <div class="delete">
                         <popupdelete>
-                            <section id="bg2">
+                            <section class="bg">
                                 <button type="button" onclick="togglePop()">
                                     <a href="#">
                                         <img src="pic/emoji%20_delete_.svg" alt="">
@@ -160,7 +175,7 @@
                                 </button>
                             </section>
 
-                            <section id="popAlert2">
+                            <section class="popAlert">
                                 <aside>
                                     <h2>Are you sure to delete course?</h2>
                                     <button type="button" onclick="togglePop()">Cancle</button>
