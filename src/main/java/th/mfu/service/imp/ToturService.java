@@ -3,6 +3,7 @@ package th.mfu.service.imp;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import th.mfu.AuthGroupRepository;
@@ -14,13 +15,13 @@ import th.mfu.dto.TutorDto;
 import th.mfu.dto.UserDto;
 
 public class ToturService {
-    private final UserRepository userRepository;
-    private final AuthGroupRepository authGroupRepository;
+    private  UserRepository userRepository;
+    private  AuthGroupRepository authGroupRepository;
 
-    public ToturService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
-        this.userRepository = userRepository;
-        this.authGroupRepository = authGroupRepository;
-    }
+    // public ToturService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+    //     this.userRepository = userRepository;
+    //     this.authGroupRepository = authGroupRepository;
+    // }
 
     public void createUser(UserDto userDto) throws IllegalStateException {
 
@@ -70,9 +71,10 @@ public class ToturService {
     }
 
     public List<Tutor> getAll() {
-        return null;
+        return getAll();
     }
 
     public void create(TutorDto tutor) {
+        
     }
 }

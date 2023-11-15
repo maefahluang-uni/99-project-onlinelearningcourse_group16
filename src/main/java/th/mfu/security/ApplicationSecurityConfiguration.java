@@ -16,7 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import th.mfu.auth.LearningUser;
-import th.mfu.service.imp.UserService;
+
 
 
 @Configuration

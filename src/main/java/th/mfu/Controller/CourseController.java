@@ -34,16 +34,16 @@ public class CourseController {
     private UserRepository userRepository;
     private TutorRepository tutorRepository;
 
-    @Autowired
-    public CourseController(CourseService courseService, CourseRepository courseRepository,
-                            EmrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
-        super();
-        this.courseService = courseService;
-        this.courseRepository = courseRepository;
-        this.enrollmentRepository = enrollmentRepository;
-        this.userRepository = userRepository;
-        this.tutorRepository = tutorRepository;
-    }
+    // @Autowired
+    // public CourseController(CourseService courseService, CourseRepository courseRepository,
+    //                         EmrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
+    //     super();
+    //     this.courseService = courseService;
+    //     this.courseRepository = courseRepository;
+    //     this.enrollmentRepository = enrollmentRepository;
+    //     this.userRepository = userRepository;
+    //     this.tutorRepository = tutorRepository;
+    // }
 
     @GetMapping("/add/{tutorId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
