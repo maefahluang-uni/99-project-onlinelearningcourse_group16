@@ -700,3 +700,24 @@ section{
   position: relative;
   margin-bottom: 500;
 }
+
+.Buycourse{
+    width: 77px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: var(--Forms-radius, 20px);
+    background: #DA5757;
+    position :relative;
+}
+
+.front a{
+   text-align:right;
+   width: 85px;
+   height: 11px;
+   flex-shrink: 0;
+   color: #FFF;
+   font-size: 8px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+}
