@@ -84,5 +84,7 @@ public class User {
     }
     public void setEmail(Object email) {
     }
+    public void setImgUrl(Object imgUrl) {
+    }
 
 }

@@ -6,6 +6,11 @@ public class Tutor {
 
     private Long tutorId;
     private String tutorName;
+    private String username;
+    private Object tutorDescription;
+    private String name;
+    private Object email;
+    private Object imgurl;
 
     public Long getTutorId() {
         return tutorId;
@@ -58,6 +63,22 @@ public class Tutor {
     }
 
     public void setTutorDescription(Object tutorDescription) {
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Object getEmail() {
+        return email;
+    }
+
+    public Object getImgUrl() {
+        return imgurl;
     }
 
 }

@@ -2,6 +2,9 @@ package th.mfu.service.imp;
 
 import java.time.LocalDate;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +17,10 @@ import th.mfu.dto.UserDto;
 
 @Service
 public class UserService {
-    private final UserRepository userRepository;
-    private final AuthGroupRepository authGroupRepository;
+    private UserRepository userRepository;
+    private AuthGroupRepository authGroupRepository;
+    private static final Logger log = LoggerFactory.getLogger(UserService.class);
+
 
     public void createUser(UserDto userDto) throws IllegalStateException {
 
@@ -34,7 +39,7 @@ public class UserService {
         String imgUrl = userDto.getImgUrl();
         LocalDate date = LocalDate.now();
         User user = new User(username, password, name, surname, email, date);
-        AuthGroup group = new AuthGroup();
+        AuthGroup group = new AuthGroup(imgUrl, imgUrl);
 
         group.setUsername(userDto.getUsername());
         group.setAuthgroup("USER");
