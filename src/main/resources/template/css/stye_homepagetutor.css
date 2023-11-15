@@ -170,7 +170,7 @@ section {
 }
 
 
-section#bg button[type=button] {
+section.bg button[type=button] {
   width: 60px;
   height: 60px;
   background-color: #fff;
@@ -182,11 +182,11 @@ section#bg button[type=button] {
   cursor: pointer;
 }
 
-section#bg button[type=button] svg {
+section.bg button[type=button] svg {
     width: 60%;
 }
 
-section#popAlert, popAlert1 ,popAlert2 {
+section.popAlert {
     position: fixed;
     top: -100%;
     left: 0;
@@ -198,7 +198,7 @@ section#popAlert, popAlert1 ,popAlert2 {
                 0.1s background-color linear 0s;
 }
 
-section#popAlert.active {
+section.popAlert.active {
     top: 0;
     background-color: rgba(255,255,255,0.3);
 
@@ -206,7 +206,7 @@ section#popAlert.active {
                 0.6s background-color linear 0.3s;
 }
 
-section#popAlert aside {
+section.popAlert aside {
     width: 90%;
     max-width: 350px;
     text-align: center;
@@ -216,7 +216,7 @@ section#popAlert aside {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
 }
 
-section#popAlert aside h2 {
+section.popAlert aside h2 {
     color: #FF0303;
     text-align: center;
     font-family: Inter;
@@ -226,7 +226,7 @@ section#popAlert aside h2 {
     line-height: normal;
 }
 
-section#popAlert aside button[type=button] {
+section.popAlert aside button[type=button] {
     width: 100px;
     font-size: 16px;
     font-weight: 600;
@@ -239,7 +239,7 @@ section#popAlert aside button[type=button] {
     transition: 0.3s all ease-in-out;
 }
 
-section#popAlert aside button[type=button]:hover {
+section.popAlert aside button[type=button]:hover {
     background-color: #ee2b2b;
     color: #fff;
 }
