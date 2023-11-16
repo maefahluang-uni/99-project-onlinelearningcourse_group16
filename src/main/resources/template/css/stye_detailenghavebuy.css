@@ -313,14 +313,6 @@ content{
     padding: 10px;
 }
 
-.headtitleregis{
-    width: 221.975px;
-    height: 55.18px;
-    flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
-    background: #D54A4A;
-}
-
 .containdenow{
     display: flex;
 }
@@ -346,4 +338,10 @@ content{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.sheetwork{
+    text-align: end;
+    position: relative;
+    top: 70px;
 }

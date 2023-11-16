@@ -347,3 +347,9 @@ content{
     font-weight: 600;
     line-height: normal;
 }
+
+.sheetwork{
+    text-align: end;
+    position: relative;
+    top: 70px;
+}
