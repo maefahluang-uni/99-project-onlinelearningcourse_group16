@@ -14,13 +14,13 @@ import th.mfu.AuthGroupRepository;
 @Service
 public class LearningUser implements UserDetailsService {
 
-    private final UserRepository userRepository;
-    private final AuthGroupRepository authGroupRepository;
+    private  UserRepository userRepository;
+    private  AuthGroupRepository authGroupRepository;
 
-    public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
-        this.userRepository = userRepository;
-        this.authGroupRepository = authGroupRepository;
-    }
+    // public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+    //     this.userRepository = userRepository;
+    //     this.authGroupRepository = authGroupRepository;
+    // }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

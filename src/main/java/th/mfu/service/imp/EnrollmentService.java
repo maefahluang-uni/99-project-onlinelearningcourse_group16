@@ -16,12 +16,12 @@ public class EnrollmentService {
     private CourseRepository courseRepository;
     private UserRepository userRepository;
 
-    @Autowired
-    public EnrollmentService(EmrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
-        this.enrollmentRepository = enrollmentRepository;
-        this.courseRepository = courseRepository;
-        this.userRepository = userRepository;
-    }
+    // @Autowired
+    // public EnrollmentService(EmrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
+    //     this.enrollmentRepository = enrollmentRepository;
+    //     this.courseRepository = courseRepository;
+    //     this.userRepository = userRepository;
+    // }
 
     public void createEnrollment(Long courseId, String username) throws Exception {
         Course course = courseRepository.findById(courseId).get();
