@@ -3,7 +3,7 @@ package th.mfu.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.token.TokenService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,13 +27,13 @@ public class TutorController {
     private TutorRepository tutorRepository;
     private CourseRepository courseRepository;
 
-    @Autowired
-    public TutorController(ToturService tutorService, TutorRepository tutorRepository,
-                           CourseRepository courseRepository) {
-        this.tutorService = tutorService;
-        this.tutorRepository = tutorRepository;
-        this.courseRepository = courseRepository;
-    }
+    // @Autowired
+    // public TutorController(ToturService tutorService, TutorRepository tutorRepository,
+    //                        CourseRepository courseRepository) {
+    //     this.tutorService = tutorService;
+    //     this.tutorRepository = tutorRepository;
+    //     this.courseRepository = courseRepository;
+    // }
 
     @GetMapping("/add")
     @PreAuthorize("hasRole('ROLE_USER')")

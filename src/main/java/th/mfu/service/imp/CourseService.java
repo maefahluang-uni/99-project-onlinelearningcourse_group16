@@ -14,10 +14,10 @@ import th.mfu.dto.CourseDto;
 public class CourseService {
         private CourseRepository courseRepository;
 
-    @Autowired
-    public CourseService(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
+    // @Autowired
+    // public CourseService(CourseRepository courseRepository) {
+    //     this.courseRepository = courseRepository;
+    // }
 
     public void create(CourseDto courseDto) throws Exception{
         if (null != courseRepository.findByCourseName(courseDto.getCourseName())) {
