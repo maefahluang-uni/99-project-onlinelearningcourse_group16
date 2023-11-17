@@ -9,8 +9,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import th.mfu.AuthGroupRepository;
-import th.mfu.auth.AuthGroup;
-import th.mfu.auth.User;
+import th.mfu.Model.AuthGroup;
+import th.mfu.Model.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.UserDto;
 

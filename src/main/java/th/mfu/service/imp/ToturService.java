@@ -7,9 +7,9 @@ import java.util.List;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import th.mfu.AuthGroupRepository;
+import th.mfu.Model.AuthGroup;
 import th.mfu.Model.Tutor;
-import th.mfu.auth.AuthGroup;
-import th.mfu.auth.User;
+import th.mfu.Model.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.TutorDto;
 import th.mfu.dto.UserDto;
@@ -18,10 +18,10 @@ public class ToturService {
     private  UserRepository userRepository;
     private  AuthGroupRepository authGroupRepository;
 
-    // public ToturService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
-    //     this.userRepository = userRepository;
-    //     this.authGroupRepository = authGroupRepository;
-    // }
+    public ToturService(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        this.userRepository = userRepository;
+        this.authGroupRepository = authGroupRepository;
+    }
 
     public void createUser(UserDto userDto) throws IllegalStateException {
 

@@ -1,10 +1,8 @@
 package th.mfu.Model;
 
-import th.mfu.auth.User;
-
 import java.time.LocalDate;
 
-public class Emrollment {
+public class Enrollment {
     private Long enrollmentId;
 
 
@@ -12,7 +10,7 @@ public class Emrollment {
     private User userName;
     private Course course;
 
-    public Emrollment(LocalDate enrollmentDate, User userName, Course course) {
+    public Enrollment(LocalDate enrollmentDate, User userName, Course course) {
         this.enrollmentDate = enrollmentDate;
         this.userName = userName;
         this.course = course;

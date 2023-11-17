@@ -5,10 +5,10 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import th.mfu.Model.Course;
-import th.mfu.Model.Emrollment;
+import th.mfu.Model.Enrollment;
+import th.mfu.Model.User;
 import th.mfu.Repository.CourseRepository;
 import th.mfu.Repository.EmrollmentRepository;
-import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 
 public class EnrollmentService {
@@ -16,12 +16,12 @@ public class EnrollmentService {
     private CourseRepository courseRepository;
     private UserRepository userRepository;
 
-    // @Autowired
-    // public EnrollmentService(EmrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
-    //     this.enrollmentRepository = enrollmentRepository;
-    //     this.courseRepository = courseRepository;
-    //     this.userRepository = userRepository;
-    // }
+    @Autowired
+    public EnrollmentService(EmrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
+        this.enrollmentRepository = enrollmentRepository;
+        this.courseRepository = courseRepository;
+        this.userRepository = userRepository;
+    }
 
     public void createEnrollment(Long courseId, String username) throws Exception {
         Course course = courseRepository.findById(courseId).get();
@@ -31,7 +31,7 @@ public class EnrollmentService {
             throw new Exception("You already enrolled in this course");
         }
         LocalDate date = LocalDate.now();
-        Emrollment enrollment = new Emrollment(date, user, course);
+        Enrollment enrollment = new Enrollment(date, user, course);
         enrollmentRepository.save(enrollment);
     }
 }

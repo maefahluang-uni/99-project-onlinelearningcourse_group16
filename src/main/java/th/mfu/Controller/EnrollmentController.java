@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import th.mfu.Model.Course;
+import th.mfu.Model.User;
 import th.mfu.Repository.CourseRepository;
-import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.service.imp.EnrollmentService;
 

@@ -1,15 +1,11 @@
 package th.mfu.Controller;
 
-
-
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import th.mfu.dto.UserDto;
 import th.mfu.service.imp.UserService;
-
 
 @Controller
 public class UserController {
@@ -19,13 +15,11 @@ public class UserController {
         this.userService = userService;
     }
 
-
     @GetMapping(value = "/register")
     public String newUser(Model model) {
         model.addAttribute("userDto", new UserDto());
         return "register";
     }
-    
 
     @PostMapping(value = "/register")
     public String saveUser(UserDto userDto, Model model) {

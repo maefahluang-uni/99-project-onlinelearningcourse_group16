@@ -4,7 +4,7 @@ package th.mfu.dto;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import th.mfu.Model.Course;
-import th.mfu.auth.User;
+import th.mfu.Model.User;
 
 import java.util.Date;
 

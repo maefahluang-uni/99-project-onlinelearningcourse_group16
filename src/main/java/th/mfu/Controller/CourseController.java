@@ -14,10 +14,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
+import th.mfu.Model.User;
 import th.mfu.Repository.CourseRepository;
 import th.mfu.Repository.EmrollmentRepository;
 import th.mfu.Repository.TutorRepository;
-import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.CourseDto;
 import th.mfu.service.imp.CourseService;

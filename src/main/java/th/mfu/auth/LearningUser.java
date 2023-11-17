@@ -10,17 +10,18 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import th.mfu.AuthGroupRepository;
+import th.mfu.Model.User;
 
 @Service
 public class LearningUser implements UserDetailsService {
 
-    private  UserRepository userRepository;
-    private  AuthGroupRepository authGroupRepository;
+    private UserRepository userRepository;
+    private AuthGroupRepository authGroupRepository;
 
-    // public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
-    //     this.userRepository = userRepository;
-    //     this.authGroupRepository = authGroupRepository;
-    // }
+    public LearningUser(UserRepository userRepository, AuthGroupRepository authGroupRepository) {
+        this.userRepository = userRepository;
+        this.authGroupRepository = authGroupRepository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

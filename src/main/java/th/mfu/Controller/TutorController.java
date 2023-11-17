@@ -27,13 +27,13 @@ public class TutorController {
     private TutorRepository tutorRepository;
     private CourseRepository courseRepository;
 
-    // @Autowired
-    // public TutorController(ToturService tutorService, TutorRepository tutorRepository,
-    //                        CourseRepository courseRepository) {
-    //     this.tutorService = tutorService;
-    //     this.tutorRepository = tutorRepository;
-    //     this.courseRepository = courseRepository;
-    // }
+    @Autowired
+    public TutorController(ToturService tutorService, TutorRepository tutorRepository,
+                           CourseRepository courseRepository) {
+        this.tutorService = tutorService;
+        this.tutorRepository = tutorRepository;
+        this.courseRepository = courseRepository;
+    }
 
     @GetMapping("/add")
     @PreAuthorize("hasRole('ROLE_USER')")
@@ -125,7 +125,7 @@ public class TutorController {
     @PreAuthorize("hasRole('ROLE_USER')")
     public String getTutorDetail(@PathVariable Long tutorId, Model model) {
         try {
-            Tutor tutor = tutorRepository.findById(tutorId).get();
+           Tutor tutor = tutorRepository.findById(tutorId).get();
             model.addAttribute("tutor", tutor);
             List<Course> courses = courseRepository.findAllByTutor(tutor);
             model.addAttribute("courses", courses);

@@ -10,6 +10,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import th.mfu.Model.AuthGroup;
+import th.mfu.Model.User;
+
 public class UserPrincipal implements UserDetails {
 
     private User user;

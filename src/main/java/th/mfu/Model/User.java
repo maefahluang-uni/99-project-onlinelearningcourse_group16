@@ -1,4 +1,4 @@
-package th.mfu.auth;
+package th.mfu.Model;
 
 import java.time.LocalDate;
 

@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import th.mfu.Model.Emrollment;
+import th.mfu.Model.Enrollment;
+import th.mfu.Model.User;
 import th.mfu.Repository.EmrollmentRepository;
-import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.service.imp.UserService;
 
@@ -31,7 +31,7 @@ public class SecurityController {
         try {
             String currentUsername = authentication.getName();
             User user = userRepository.findByUsername(currentUsername);
-            List<Emrollment> enrollments = enrollmentRepository.findAllByUserName(user);
+            List<Enrollment> enrollments = enrollmentRepository.findAllByUserName(user);
             int numCourses = enrollments.size();
             model.addAttribute("user", user);
             model.addAttribute("enrollments", enrollments);
