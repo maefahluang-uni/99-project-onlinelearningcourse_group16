@@ -8,15 +8,17 @@
 }
 .back{
     width: 49.732px;
-    height: 100px;
+    height: 60px;
     flex-shrink: 0;
     position: relative;
     top: 50px;
     left: 20px;
-    
 }
+
 h1 {
     color: #000;
+    width: 500px;
+    height: 58px;
 text-align: center;
 font-family: Inter;
 font-size: 48px;
@@ -24,8 +26,8 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 position: relative;
-right: 450px;
-bottom: 60px;
+left: 80px;
+bottom: 20px;
 }
 
 .red{ 
@@ -38,8 +40,8 @@ font-weight: 700;
 line-height: normal;
 align-items: flex-start;
 position: relative;
-left: 85px;
-bottom: 15px;
+left: 120px;
+bottom: 0px;
 }
 .pmdetail img{
     width: 360px;
@@ -47,7 +49,7 @@ bottom: 15px;
     flex-shrink: 0;
     position: relative;
     top: 60px;
-    right: 300px;
+    right: 250px;
 }
 p2{
     color: #000;
@@ -58,7 +60,7 @@ font-weight: 500;
 line-height: normal;
 position: relative;
 bottom: 265px;
-left: 85px;
+left: 119px;
 }
 
 p{
@@ -71,7 +73,7 @@ font-weight: 500;
 line-height: normal;
 position: relative;
 top: 120px;
-right:495px;
+right:440px;
 }
 .money{
     color: #2A5F2F;
@@ -83,7 +85,7 @@ font-weight: 700;
 line-height: normal;
 position: relative;
 top: -10px;
-right:495px;
+right:440px;
 }
 p3{
     color: #000;
@@ -93,8 +95,8 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 position: relative;
-bottom: 325px;
-left: 800px;
+bottom: 318px;
+left: 820px;
 }
 .header-icon2{
     margin-top: 37px;
