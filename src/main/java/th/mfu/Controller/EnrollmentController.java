@@ -2,7 +2,7 @@ package th.mfu.Controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -26,12 +26,12 @@ public class EnrollmentController {
     private UserRepository userRepository;
     private CourseRepository courseRepository;
 
-    // @Autowired
-    // public EnrollmentController(EnrollmentService enrollmentService, UserRepository userRepository, CourseRepository courseRepository) {
-    //     this.enrollmentService = enrollmentService;
-    //     this.userRepository = userRepository;
-    //     this.courseRepository = courseRepository;
-    // }
+    @Autowired
+    public EnrollmentController(EnrollmentService enrollmentService, UserRepository userRepository, CourseRepository courseRepository) {
+        this.enrollmentService = enrollmentService;
+        this.userRepository = userRepository;
+        this.courseRepository = courseRepository;
+    }
 
     @GetMapping("/save/{courseId}")
     public String saveEnrollment(@PathVariable Long courseId, Authentication authentication, Model model) {
