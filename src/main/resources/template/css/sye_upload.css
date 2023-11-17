@@ -47,6 +47,7 @@ contain{
         position: relative;
         right: 350px;
         top: -100px;
+        border: 3px solid #ff6a00;
 
      }
     .number2{
@@ -140,27 +141,32 @@ line-height: normal;
 .cri{
     width: 1000px;
     height: 100px;
-    background-color: aquamarine;
+    background-color: rgb(26, 190, 144);
     display: flex;
     margin-left: 220px;
     justify-content: space-between;
-    text-align: ;
+    text-align: center;
+    
 }
 
 .circle{
     width: 54px;
     height: 54px;
-    background-color: rgb(255, 155, 127);
+    background-color: rgb(193, 189, 189);
+    color: #9E9E9E;
+    padding: 18px 20px;
     border-radius: 100%;
     text-align: center;
     margin-top: 20px;
-
+    
 }
 
 .circle1{
     width: 54px;
     height: 54px;
-    background-color: rgb(63, 111, 95);
+    background-color: rgb(193, 189, 189);
+    color: #9E9E9E;
+    padding: 18px 20px;
     border-radius: 100%;
     text-align: center;
     margin-top: 20px;
@@ -169,7 +175,9 @@ line-height: normal;
 .circle2{
     width: 54px;
     height: 54px;
-    background-color: rgb(136, 47, 47);
+    background-color: rgb(64, 13, 217);
+    color: #f7f4f4;
+    padding: 18px 20px;
     border-radius: 100%;
     text-align: center;
     margin-top: 20px;
@@ -178,7 +186,9 @@ line-height: normal;
 .circle3{
     width: 54px;
     height: 54px;
-    background-color: rgb(181, 72, 179);
+    background-color: rgb(193, 189, 189);
+    color: #9E9E9E;
+    padding: 18px 20px;
     border-radius: 100%;
     text-align: center;
     margin-top: 20px;
