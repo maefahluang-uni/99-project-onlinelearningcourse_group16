@@ -6,12 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.*;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@Data
+
 @Entity
 @Table(name = "AUTH_USER_GROUP")
 public class AuthGroup {
@@ -24,21 +22,21 @@ public class AuthGroup {
     @Column(name = "AUTH_GROUP")
     private String authgroup;
 
-    // public String getUsername() {
-    //     return username;
-    // }
+    public String getUsername() {
+        return username;
+    }
 
-    // public void setUsername(String username) {
-    //     this.username = username;
-    // }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    // public String getAuthgroup() {
-    //     return authgroup;
-    // }
+    public String getAuthgroup() {
+        return authgroup;
+    }
 
-    // public void setAuthgroup(String authgroup) {
-    //     this.authgroup = authgroup;
-    // }
+    public void setAuthgroup(String authgroup) {
+        this.authgroup = authgroup;
+    }
 
     public AuthGroup(String username, String authgroup) {
         this.username = username;

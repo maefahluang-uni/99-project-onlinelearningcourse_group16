@@ -1,5 +1,6 @@
 package th.mfu.Controller;
 
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,13 +17,11 @@ import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
 import th.mfu.Model.User;
 import th.mfu.Repository.CourseRepository;
-import th.mfu.Repository.EmrollmentRepository;
+import th.mfu.Repository.EnrollmentRepository;
 import th.mfu.Repository.TutorRepository;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.CourseDto;
 import th.mfu.service.imp.CourseService;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("/courses")
@@ -30,27 +29,27 @@ public class CourseController {
 
     private CourseService courseService;
     private CourseRepository courseRepository;
-    private EmrollmentRepository enrollmentRepository;
+    private EnrollmentRepository enrollmentRepository;
     private UserRepository userRepository;
     private TutorRepository tutorRepository;
 
-    // @Autowired
-    // public CourseController(CourseService courseService, CourseRepository courseRepository,
-    //                         EmrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
-    //     super();
-    //     this.courseService = courseService;
-    //     this.courseRepository = courseRepository;
-    //     this.enrollmentRepository = enrollmentRepository;
-    //     this.userRepository = userRepository;
-    //     this.tutorRepository = tutorRepository;
-    // }
+    @Autowired
+    public CourseController(CourseService courseService, CourseRepository courseRepository,
+            EnrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
+        super();
+        this.courseService = courseService;
+        this.courseRepository = courseRepository;
+        this.enrollmentRepository = enrollmentRepository;
+        this.userRepository = userRepository;
+        this.tutorRepository = tutorRepository;
+    }
 
     @GetMapping("/add/{tutorId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String addCourse(@PathVariable Long tutorId, Model model) {
         try {
             Tutor current = tutorRepository.findById(tutorId).get();
-            model.addAttribute("course", new CourseDto(null, null, null, null, null, null, current));
+            model.addAttribute("course", new CourseDto());
             model.addAttribute("tutor", current);
             return "courses/course-add";
         } catch (Exception e) {
@@ -92,7 +91,8 @@ public class CourseController {
 
     @PostMapping("/edit/{tutorId}/{courseId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String updateCourse(@PathVariable Long tutorId, @PathVariable Long courseId, Course course, Model model, RedirectAttributes attributes) {
+    public String updateCourse(@PathVariable Long tutorId, @PathVariable Long courseId, Course course, Model model,
+            RedirectAttributes attributes) {
 
         try {
             Tutor currentTutor = tutorRepository.findById(tutorId).get();
@@ -138,7 +138,7 @@ public class CourseController {
         Boolean enrollment = false;
         try {
             Course course = courseRepository.findById(courseId).get();
-            User user = userRepository.findByUsername(username);
+            User user = UserRepository.findByUsername(username);
             if (null != enrollmentRepository.findByCourseAndUserName(course, user)) {
                 enrollment = true;
             }

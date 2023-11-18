@@ -10,26 +10,24 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
-
-
     private String password;
     private String name;
-
     private String surname;
     private LocalDate date;
-
+    private String email;
     private String detail;
+    private String imgUrl;
 
-
-    public User(String username, String password, String name, String surname, LocalDate date) {
+    
+    public User(String username, String password, String name, String surname, LocalDate date, String email,
+            String imgUrl) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
         this.date = date;
-    }
-    public User(String detail, String password2, String name2, String surname2, String email, LocalDate date2) {
-        this.detail = detail;
+        this.email = email;
+        this.imgUrl = imgUrl;
     }
 
     public String getUsername() {
@@ -72,6 +70,14 @@ public class User {
         this.date = date;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getDetail() {
         return detail;
     }
@@ -79,12 +85,17 @@ public class User {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-    public Object getEmail() {
-        return null;
+
+    public String getImgUrl() {
+        return imgUrl;
     }
-    public void setEmail(Object email) {
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
-    public void setImgUrl(Object imgUrl) {
+
+    public User(String detail) {
+        this.detail = detail;
     }
 
 }

@@ -11,6 +11,8 @@ public class Tutor {
     private String name;
     private Object email;
     private Object imgurl;
+    private String tutorSurname;
+    private String tutorDetail;
 
     public Long getTutorId() {
         return tutorId;
@@ -44,10 +46,6 @@ public class Tutor {
         this.tutorDetail = tutorDetail;
     }
 
-    private String tutorSurname;
-
-
-    private String tutorDetail;
 
     public Tutor(String tutorName, String tutorSurname) {
         this.tutorName = tutorName;
@@ -59,7 +57,7 @@ public class Tutor {
     }
 
     public Object getTutorDescription() {
-        return null;
+        return tutorDescription;
     }
 
     public void setTutorDescription(Object tutorDescription) {

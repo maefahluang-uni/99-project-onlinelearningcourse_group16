@@ -7,7 +7,7 @@ import th.mfu.Model.User;
 
 import java.util.List;
 
-public interface EmrollmentRepository extends JpaRepository<Enrollment, Long> {
+public interface EnrollmentRepository extends JpaRepository<Enrollment, Long> {
 
     List<Enrollment> findAllByCourse(Course course);
 

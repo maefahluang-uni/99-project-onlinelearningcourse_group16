@@ -3,14 +3,14 @@ package th.mfu.dto;
 public class UserDto {
 
     private String username;
-
-
-
     private String password;
     private String name;
     private String surname;
     private String email;
 
+
+
+ 
 
     public UserDto() {
         this.username = username;
@@ -59,12 +59,6 @@ public class UserDto {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getImgUrl() {
-        return null;
-    }
-
-
 
 }
 

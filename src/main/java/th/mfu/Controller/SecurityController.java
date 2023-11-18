@@ -1,6 +1,5 @@
 package th.mfu.Controller;
 
-
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -8,23 +7,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import lombok.AllArgsConstructor;
 import th.mfu.Model.Enrollment;
 import th.mfu.Model.User;
-import th.mfu.Repository.EmrollmentRepository;
+import th.mfu.Repository.EnrollmentRepository;
 import th.mfu.auth.UserRepository;
 import th.mfu.service.imp.UserService;
 
-import java.util.List;
-
 @Controller
 @PreAuthorize("hasRole('ROLE_USER')")
-
+@AllArgsConstructor
 public class SecurityController {
 
-    private  UserRepository userRepository;
-    private  EmrollmentRepository enrollmentRepository;
-    private  UserService userService;
+    private final UserRepository userRepository;
+    private final EnrollmentRepository enrollmentRepository;
+    private final UserService userService;
 
     @GetMapping("/profile")
     public String getUserProfile(Authentication authentication, Model model) {
@@ -51,8 +48,8 @@ public class SecurityController {
             String currentusername = authentication.getName();
             User current = userRepository.findById(userID).get();
             if (currentusername.equals(current.getUsername())) {
-            model.addAttribute(current);
-            return "user/user-edit";
+                model.addAttribute(current);
+                return "user/user-edit";
             } else {
                 throw new Exception("Error de autenticacion");
             }
@@ -73,6 +70,7 @@ public class SecurityController {
                 current.setName(user.getName());
                 current.setSurname(user.getSurname());
                 current.setEmail(user.getEmail());
+                current.setImgUrl(user.getImgUrl());
                 userService.update(current);
 
                 return "redirect:/profile";
