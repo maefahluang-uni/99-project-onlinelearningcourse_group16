@@ -1,23 +1,25 @@
 package th.mfu.service.imp;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import th.mfu.Model.Course;
+import th.mfu.Model.Enrollment;
+
+import th.mfu.Repository.CourseRepository;
+import th.mfu.Repository.EnrollmentRepository;
+import th.mfu.auth.User;
+import th.mfu.auth.UserRepository;
 
 import java.time.LocalDate;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import th.mfu.Model.Course;
-import th.mfu.Model.Enrollment;
-import th.mfu.Model.User;
-import th.mfu.Repository.CourseRepository;
-import th.mfu.Repository.EmrollmentRepository;
-import th.mfu.auth.UserRepository;
-
+@Service
 public class EnrollmentService {
-     private EmrollmentRepository enrollmentRepository;
+
+    private EnrollmentRepository enrollmentRepository;
     private CourseRepository courseRepository;
     private UserRepository userRepository;
 
     @Autowired
-    public EnrollmentService(EmrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
+    public EnrollmentService(EnrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
         this.enrollmentRepository = enrollmentRepository;
         this.courseRepository = courseRepository;
         this.userRepository = userRepository;

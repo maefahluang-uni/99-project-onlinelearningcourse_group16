@@ -5,11 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
 import th.mfu.service.imp.CourseService;
-import th.mfu.service.imp.ToturService;
+import th.mfu.service.imp.TutorService;
 
 import java.util.List;
 
@@ -17,19 +16,18 @@ import java.util.List;
 @RequestMapping("/api")
 public class APIController {
 
-    private ToturService tutorService;
+    private TutorService tutorService;
     private CourseService courseService;
 
     @Autowired
-    public APIController(ToturService tutorService, CourseService courseService) {
+    public APIController(TutorService tutorService, CourseService courseService) {
+        super();
         this.tutorService = tutorService;
         this.courseService = courseService;
     }
 
     @GetMapping("/tutors")
-    public List<Tutor> getAllTutors() { 
-        return this.tutorService.getAll(); 
-    }
+    public List<Tutor> getAllTutors() { return this.tutorService.getAll(); }
 
     @GetMapping("/courses")
     public List<Course> getAllCourses() {

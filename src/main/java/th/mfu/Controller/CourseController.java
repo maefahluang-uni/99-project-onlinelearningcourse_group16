@@ -1,6 +1,5 @@
 package th.mfu.Controller;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -12,16 +11,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
-import th.mfu.Model.User;
 import th.mfu.Repository.CourseRepository;
 import th.mfu.Repository.EnrollmentRepository;
 import th.mfu.Repository.TutorRepository;
+import th.mfu.auth.User;
 import th.mfu.auth.UserRepository;
 import th.mfu.dto.CourseDto;
 import th.mfu.service.imp.CourseService;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/courses")
@@ -35,7 +35,7 @@ public class CourseController {
 
     @Autowired
     public CourseController(CourseService courseService, CourseRepository courseRepository,
-            EnrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
+                            EnrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
         super();
         this.courseService = courseService;
         this.courseRepository = courseRepository;
@@ -91,8 +91,7 @@ public class CourseController {
 
     @PostMapping("/edit/{tutorId}/{courseId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String updateCourse(@PathVariable Long tutorId, @PathVariable Long courseId, Course course, Model model,
-            RedirectAttributes attributes) {
+    public String updateCourse(@PathVariable Long tutorId, @PathVariable Long courseId, Course course, Model model, RedirectAttributes attributes) {
 
         try {
             Tutor currentTutor = tutorRepository.findById(tutorId).get();
@@ -138,7 +137,7 @@ public class CourseController {
         Boolean enrollment = false;
         try {
             Course course = courseRepository.findById(courseId).get();
-            User user = UserRepository.findByUsername(username);
+            User user = userRepository.findByUsername(username);
             if (null != enrollmentRepository.findByCourseAndUserName(course, user)) {
                 enrollment = true;
             }

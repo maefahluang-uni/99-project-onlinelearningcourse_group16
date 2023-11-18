@@ -1,18 +1,20 @@
 package th.mfu.service.imp;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
 import th.mfu.Repository.CourseRepository;
 import th.mfu.dto.CourseDto;
 
+import java.util.List;
+
 @Service
-public class CourseService {
-        private CourseRepository courseRepository;
+public class CourseService{
+
+    private CourseRepository courseRepository;
 
     @Autowired
     public CourseService(CourseRepository courseRepository) {
@@ -38,15 +40,15 @@ public class CourseService {
     public void update(Course course, Long courseId) {
         Course currentCourse = courseRepository.findById(courseId).get();
 
-            currentCourse.setCourseName(course.getCourseName());
-            currentCourse.setCourseDescripton(course.getCourseDescripton());
-            currentCourse.setCourseDetail(course.getCourseDetail());
-            currentCourse.setCourseDifficulty(course.getCourseDifficulty());
-            currentCourse.setCourseUrl(course.getCourseUrl());
-            currentCourse.setImgUrl(course.getImgUrl());
-            currentCourse.setTutor(course.getTutor());
+        currentCourse.setCourseName(course.getCourseName());
+        currentCourse.setCourseDescription(course.getCourseDescription());
+        currentCourse.setCourseDetail(course.getCourseDetail());
+        currentCourse.setCourseDifficulty(course.getCourseDifficulty());
+        currentCourse.setCourseUrl(course.getCourseUrl());
+        currentCourse.setImgUrl(course.getImgUrl());
+        currentCourse.setTutor(course.getTutor());
 
-            courseRepository.save(currentCourse);
+        courseRepository.save(currentCourse);
 
     }
 
@@ -58,4 +60,3 @@ public class CourseService {
     }
 
 }
-
