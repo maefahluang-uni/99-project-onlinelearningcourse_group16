@@ -608,7 +608,7 @@ body {
 
 .front {
   position: relative;
-  left: 100px;
+  left: 10px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
