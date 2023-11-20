@@ -48,7 +48,7 @@ public class CourseController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String addCourse(@PathVariable Long tutorId, Model model) {
         try {
-            Tutor current = tutorRepository.findById(tutorId).get();
+            Tutor current = (Tutor) tutorRepository.findById(tutorId).get();
             model.addAttribute("course", new CourseDto());
             model.addAttribute("tutor", current);
             return "courses/course-add";
@@ -63,7 +63,7 @@ public class CourseController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String saveCourse(@PathVariable Long tutorId, CourseDto course, Model model) {
         try {
-            Tutor current = tutorRepository.findById(tutorId).get();
+            Tutor current = (Tutor) tutorRepository.findById(tutorId).get();
             course.setTutor(current);
             courseService.create(course);
             return "redirect:/courses";
@@ -94,7 +94,7 @@ public class CourseController {
     public String updateCourse(@PathVariable Long tutorId, @PathVariable Long courseId, Course course, Model model, RedirectAttributes attributes) {
 
         try {
-            Tutor currentTutor = tutorRepository.findById(tutorId).get();
+            Tutor currentTutor = (Tutor) tutorRepository.findById(tutorId).get();
             course.setTutor(currentTutor);
 
             courseService.update(course, courseId);

@@ -30,11 +30,11 @@ public class TutorService {
     }
 
     public List<Tutor> getAll() {
-        return tutorRepository.findAll();
+        return (List<Tutor>) tutorRepository.findAll();
     }
 
     public void update(Tutor tutor) {
-        Tutor currentTutor = tutorRepository.findById(tutor.getTutorId()).get();
+        Tutor currentTutor = (Tutor) tutorRepository.findById(tutor.getTutorId()).get();
 
         currentTutor.setTutorName(tutor.getTutorName());
         currentTutor.setTutorSurname(tutor.getTutorSurname());
@@ -46,7 +46,7 @@ public class TutorService {
     }
 
     public void patch(Tutor tutor) {
-        Tutor current = tutorRepository.findById(tutor.getTutorId()).get();
+        Tutor current = (Tutor) tutorRepository.findById(tutor.getTutorId()).get();
 
         current.setTutorDetail(tutor.getTutorDetail());
 
