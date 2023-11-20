@@ -1,7 +1,10 @@
 package th.mfu.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import th.mfu.Model.Tutor;
 
+
+import org.springframework.stereotype.Repository;
+import th.mfu.Model.Tutor;
+@Repository
 public interface TutorRepository extends JpaRepository<Tutor, Long> {
 }

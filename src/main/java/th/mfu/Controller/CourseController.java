@@ -120,7 +120,7 @@ public class CourseController {
     public String deleteCourse(@PathVariable Long courseId, Model model) {
         try {
             Course courseActual = courseRepository.findById(courseId).get();
-            courseService.delete(courseActual);
+//            courseService.delete(courseActual);
 
             return "redirect:/courses";
         } catch (Exception e) {

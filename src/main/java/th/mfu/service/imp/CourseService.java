@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class CourseService{
 
-    private CourseRepository courseRepository;
+    private final CourseRepository courseRepository;
 
     @Autowired
     public CourseService(CourseRepository courseRepository) {

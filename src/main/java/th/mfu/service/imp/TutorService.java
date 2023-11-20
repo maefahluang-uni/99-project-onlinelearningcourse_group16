@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class TutorService {
 
-    private TutorRepository tutorRepository;
+    private final TutorRepository tutorRepository;
 
     @Autowired
     public TutorService(TutorRepository tutorRepository) {
