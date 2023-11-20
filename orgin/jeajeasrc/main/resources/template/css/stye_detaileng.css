@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.contain{
+    max-width: 5000px;
+    height: 1741px;
+    margin: 0 auto;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.subject{
+    display: flex;
+    margin-right: 41.79px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+intro{
+    display: flex;
+    margin-right: 41.79px;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.introduction{
+    color: #428749;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 20px;
+}
+
+deja{
+    display: flex;
+    padding: 10px;
+
+}
+
+.lessonhour{
+    width: 107.725px;
+    height: 22.229px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #E3E3E3;
+    margin-right: 20px;
+}
+
+.minja{
+    width: 107.725px;
+    height: 22.229px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #E3E3E3;
+}
+
+content{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+
+.main-clip{
+    size: 20%;
+    margin-right: 50px;
+}
+
+.containerclip{
+    align-items: center;
+    width: 1000;
+    height: 500;
+    display: grid;
+    gap: 15px;
+    align-items: flex-start;
+    display: flex;
+    padding-bottom: 80px;
+}
+
+
+.containerclip .main-clip{
+    background: rgb(8, 32, 15);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.containerclip .main-clip videoja{
+    width: auto;
+    height: 37.4px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    padding: 1000px;
+}
+
+
+.containerclip .main-clip .titlecourse{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.containerclip .video-list{
+    border-radius: 5px;
+    overflow-y: scroll;
+    width: 282px;
+    height: 558px;
+    margin-left: auto;
+    border-radius: var(--Forms-radius, 20px);
+    background: #F8FAEC;
+    padding-left: 10px;
+}
+
+.video-list::-webkit-scrollbar{
+    width: 7px;
+}
+
+.video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius: 50px;
+}
+
+.video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+
+.vid{
+    padding-bottom: 20px;
+    display: flex;
+}
+
+
+.containcontent{
+    width: 282px;
+    height: 558px;
+    margin-left: auto;
+    border-radius: var(--Forms-radius, 20px);
+    background: #F8FAEC;
+    display: flex;
+
+}
+
+.coursecontentjaa{
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    border-radius: 2rem;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 1.9rem 1.4rem 1.5rem 1.7rem;
+
+}
+
+.coursedetail{
+    width: 236px;
+    height: 35.076px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 15px;
+    background: #428749;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.jujai{
+    padding-top: 20px;
+    margin-left: 25px;
+    color: #FF0303;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.jujaisub{
+    padding-top: 5px;
+    margin-left: 25px;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.de1{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+
+.de2{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+
+.de3{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+
+.de4{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+
+.lessonde{
+    width: 236px;
+    height: 35.076px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 15px;
+    background: #428749;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.lessonengsub{
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 20px;
+    margin-left: 25px;
+}
+
+.lessoneng123{
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 20px;
+    margin-left: 70px;
+}
+
+.clipsubject{
+    color: #000;
+    font-family: Inter;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 10px;
+    }
+
+.listcliplesson{
+    color: #000;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.allldetail{
+    width: 773px;
+    height: 700px;
+    flex-shrink: 0;
+    background: #FFF;
+    align-items: center;
+}
+
+.back{
+    width: 49.732px;
+    height: 100px;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.containbuycourse{
+    width: 221.975px;
+    height: 153px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.headtitleregis{
+    width: 221.975px;
+    height: 55.18px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    background: #D54A4A;
+}
+
+.headtitleregis p{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 13px;
+}
+
+.boxbuy{
+    padding-top: 12px;
+    text-align: center;
+}
+
+.baht{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.buyengcourse{
+    margin-left: 64px;
+}
+
+.containdenow{
+    display: flex;
+}
+
+.buttonbuynowja{
+    width: 130.77px;
+    height: 27.733px;
+    flex-shrink: 0;
+    border-radius: var(--Forms-radius, 20px);
+    background: #DA5757;
+    justify-content: center;
+    align-items: center;
+    margin-left: 46px;
+}
+
+buttonbuy{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.morecourse{
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    gap: 100px;
+}
+.coursemorseja{
+    display: flex;
+    margin: 20px;
+}
+.morecourse1{
+    padding-right: 100px;
+}
+
+.headermorecourse{
+    color: #428749;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
