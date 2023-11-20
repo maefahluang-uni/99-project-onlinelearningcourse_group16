@@ -43,5 +43,120 @@ contain{
     background: #E1ECE8;
     position: relative;
     left: 180px;
-    top: 120px;
+    top: -60px;
     }
+.cri{
+     width: 1000px;
+     height: 100px;
+     background-color: white;
+     display: flex;
+     margin-left: 220px;
+     justify-content: space-between;
+     
+ }
+ .circle{
+     width: 54px;
+     height: 54px;
+     background-color: #E3E3E3;
+     border-radius: 100%;
+     text-align: center;
+     margin-top: 40px;
+
+ }
+
+ .circle1{
+     width: 54px;
+     height: 54px;
+     background-color: #E3E3E3;
+     border-radius: 100%;
+     text-align: center;
+     margin-top: 40px;
+
+ }
+ .circle2{
+     width: 54px;
+     height: 54px;
+     background-color: #E3E3E3;
+     border-radius: 100%;
+     text-align: center;
+     margin-top: 40px;
+
+ }
+ .circle3{
+     width: 54px;
+     height: 54px;
+     background-color: #1D5BA4;
+     border-radius: 100%;
+     text-align: center;
+     margin-top: 40px;
+ }
+ .numbernew p4 {
+     justify-content:space-between;
+     margin-top:50px;
+     position:relative;
+     left:242px;
+     top:-60px;
+
+ }
+ .numbernew p5 {
+     justify-content:space-between;
+
+     margin-top:50px;
+     position:relative;
+     left:480px;
+     top:-60px;
+     
+ }
+ .numbernew p6 {
+     justify-content:space-between;
+     margin-top:50px;
+     position:relative;
+     left:715px;
+     top:-60px;
+ }
+ .numbernew p7 {
+     justify-content:space-between;
+     margin-top:50px;
+     position:relative;
+     left:953px;
+     top:-60px;
+ }
+ .detail p1{
+     justify-content:space-between;
+         margin-top:50px;
+         position:relative;
+         left:300px;
+         top:-40px;
+ }
+ .detail p2{
+     justify-content:space-between;
+         margin-top:50px;
+         position:relative;
+         left:450px;
+         top:-40px;
+ }
+ .detail p3{
+     justify-content:space-between;
+         margin-top:50px;
+         position:relative;
+         left:649px;
+         top:-40px;
+ }
+ .detail p4{
+     justify-content:space-between;
+         margin-top:50px;
+         position:relative;
+         left:850px;
+         top:-40px;
+ }
+.mg{
+margin-top:90px;
+position:relative;
+left:350px;
+top:90px;
+}
+.btn1{
+position:relative;
+left:500px;
+top:150px;
+}
