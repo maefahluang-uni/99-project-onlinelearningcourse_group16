@@ -1,9 +1,7 @@
 package th.mfu.Controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,24 +14,25 @@ import th.mfu.Model.Tutor;
 import th.mfu.Repository.CourseRepository;
 import th.mfu.Repository.TutorRepository;
 import th.mfu.dto.TutorDto;
-import th.mfu.service.imp.ToturService;
+import th.mfu.service.imp.TutorService;
 
 import java.util.List;
 
 @Controller
 @RequestMapping("/tutors")
 public class TutorController {
-    private ToturService tutorService;
+
+    private TutorService tutorService;
     private TutorRepository tutorRepository;
     private CourseRepository courseRepository;
 
-    // @Autowired
-    // public TutorController(ToturService tutorService, TutorRepository tutorRepository,
-    //                        CourseRepository courseRepository) {
-    //     this.tutorService = tutorService;
-    //     this.tutorRepository = tutorRepository;
-    //     this.courseRepository = courseRepository;
-    // }
+    @Autowired
+    public TutorController(TutorService tutorService, TutorRepository tutorRepository,
+                           CourseRepository courseRepository) {
+        this.tutorService = tutorService;
+        this.tutorRepository = tutorRepository;
+        this.courseRepository = courseRepository;
+    }
 
     @GetMapping("/add")
     @PreAuthorize("hasRole('ROLE_USER')")
@@ -68,13 +67,15 @@ public class TutorController {
     @PostMapping("/update/{tutorId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String updateTutor(@PathVariable Long tutorId,
-                              Tutor tutor, RedirectAttributes attributes, Model model) {
+                              Tutor tutor, RedirectAttributes attributes, Model model){
 
         try {
             Tutor currentTutor = tutorRepository.findById(tutorId).get();
             currentTutor.setTutorName(tutor.getTutorName());
             currentTutor.setTutorSurname(tutor.getTutorSurname());
+            currentTutor.setTutorEmail(tutor.getTutorEmail());
             currentTutor.setTutorDescription(tutor.getTutorDescription());
+            currentTutor.setImgUrl(tutor.getImgUrl());
 
             tutorService.update(tutor);
             attributes.addAttribute("tutorId", tutorId);
@@ -85,8 +86,6 @@ public class TutorController {
             model.addAttribute("error", e);
             return "error";
         }
-
-
     }
 
     @PostMapping("/patch/{tutorId}")
@@ -104,6 +103,14 @@ public class TutorController {
             model.addAttribute("error", e);
             return "error";
         }
+    }
+
+    @GetMapping
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public String getTutorsList(Model model) {
+        List<Tutor> tutors = tutorService.getAll();
+        model.addAttribute("tutors", tutors);
+        return "tutors/tutors";
     }
 
     @GetMapping("/delete/{tutorId}")
@@ -135,6 +142,5 @@ public class TutorController {
             model.addAttribute("error", e);
             return "error";
         }
-
     }
 }
