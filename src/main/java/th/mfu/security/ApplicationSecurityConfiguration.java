@@ -1,6 +1,5 @@
 package th.mfu.security;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,10 +13,7 @@ import org.springframework.security.core.authority.mapping.GrantedAuthoritiesMap
 import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
 import th.mfu.auth.LearningUser;
-
-
 
 @Configuration
 @EnableWebSecurity
@@ -25,12 +21,12 @@ import th.mfu.auth.LearningUser;
 public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private LearningUser userService;
+    private LearningUser userDetailsService;
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setUserDetailsService(userService);
+        provider.setUserDetailsService(userDetailsService);
         provider.setPasswordEncoder(new BCryptPasswordEncoder(11));
         provider.setAuthoritiesMapper(authoritiesMapper());
         return provider;
