@@ -605,6 +605,12 @@ body {
   ;
   max-width: auto 100%;
 }
+
+.front {
+  position: relative;
+  left: 100px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
 
 .sidebar {
@@ -708,16 +714,7 @@ section{
     border-radius: var(--Forms-radius, 20px);
     background: #DA5757;
     position :relative;
+    left: 100px;
+    border: 3px solid #ac57da;
 }
 
-.front a{
-   text-align:right;
-   width: 85px;
-   height: 11px;
-   flex-shrink: 0;
-   color: #FFF;
-   font-size: 8px;
-   font-style: normal;
-   font-weight: 600;
-   line-height: normal;
-}
