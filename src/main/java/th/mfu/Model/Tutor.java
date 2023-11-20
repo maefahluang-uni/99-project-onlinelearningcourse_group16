@@ -1,84 +1,43 @@
 package th.mfu.Model;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "tutor")
 public class Tutor {
 
+    @Id
+    @Column(name = "tutorId")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tutorId;
+    @Column(name = "name")
     private String tutorName;
-    private String username;
-    private Object tutorDescription;
-    private String name;
-    private Object email;
-    private Object imgurl;
-
-    public Long getTutorId() {
-        return tutorId;
-    }
-
-    public void setTutorId(Long tutorId) {
-        this.tutorId = tutorId;
-    }
-
-    public String getTutorName() {
-        return tutorName;
-    }
-
-    public void setTutorName(String tutorName) {
-        this.tutorName = tutorName;
-    }
-
-    public String getTutorSurname() {
-        return tutorSurname;
-    }
-
-    public void setTutorSurname(String tutorSurname) {
-        this.tutorSurname = tutorSurname;
-    }
-
-    public String getTutorDetail() {
-        return tutorDetail;
-    }
-
-    public void setTutorDetail(String tutorDetail) {
-        this.tutorDetail = tutorDetail;
-    }
-
+    @Column(name = "surname")
     private String tutorSurname;
-
-
+    @Column(name = "email")
+    private String tutorEmail;
+    @Column(name = "description")
+    private String tutorDescription;
+    @Column(name = "detail")
     private String tutorDetail;
+    private String imgUrl;
 
-    public Tutor(String tutorName, String tutorSurname) {
+
+    public Tutor(String tutorName, String tutorSurname, String tutorEmail, String tutorDescription, String imgUrl) {
         this.tutorName = tutorName;
         this.tutorSurname = tutorSurname;
+        this.tutorEmail = tutorEmail;
+        this.tutorDescription = tutorDescription;
+        this.imgUrl = imgUrl;
     }
 
     public Tutor(String tutorDetail) {
         this.tutorDetail = tutorDetail;
     }
-
-    public Object getTutorDescription() {
-        return null;
-    }
-
-    public void setTutorDescription(Object tutorDescription) {
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Object getEmail() {
-        return email;
-    }
-
-    public Object getImgUrl() {
-        return imgurl;
-    }
-
 }

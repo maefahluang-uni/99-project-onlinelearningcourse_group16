@@ -1,90 +1,48 @@
 package th.mfu.auth;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Entity
+@Table(name = "user")
 public class User {
-
+    @Id
+    @Column(name = "userId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
-
-
+    @Column(name = "password")
     private String password;
+    @Column(name = "name")
     private String name;
-
+    @Column(name = "surname")
     private String surname;
+    @Column(name = "email")
+    private String email;
+    private String detail;
+    private String imgUrl;
+    @Column(name = "registration_date")
     private LocalDate date;
 
-    private String detail;
-
-
-    public User(String username, String password, String name, String surname, LocalDate date) {
+    public User(String username, String password, String name, String surname, String email, String imgUrl, LocalDate date) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
-        this.date = date;
-    }
-    public User(String detail, String password2, String name2, String surname2, String email, LocalDate date2) {
-        this.detail = detail;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
+        this.email = email;
+        this.imgUrl = imgUrl;
         this.date = date;
     }
 
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
+    public User(String detail) {
         this.detail = detail;
     }
-    public Object getEmail() {
-        return null;
-    }
-    public void setEmail(Object email) {
-    }
-    public void setImgUrl(Object imgUrl) {
-    }
-
 }

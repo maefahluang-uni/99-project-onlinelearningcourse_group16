@@ -135,110 +135,52 @@ line-height: normal;
     background: #E1ECE8;
     position: relative;
     left: 180px;
-    top: 30px;
+    top: 120px;
     }
- .video{
-
- }
 .cri{
     width: 1000px;
     height: 100px;
-    background-color: weight;
+    background-color: aquamarine;
     display: flex;
-    margin-left: 250px;
+    margin-left: 220px;
     justify-content: space-between;
-
+    text-align: ;
 }
 
 .circle{
     width: 54px;
     height: 54px;
-    background-color: #1D5BA4;
+    background-color: rgb(255, 155, 127);
     border-radius: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 
 }
 
 .circle1{
     width: 54px;
     height: 54px;
-    background-color: #9AC8FF;
+    background-color: rgb(63, 111, 95);
     border-radius: 100%;
     text-align: center;
-    margin-top: 30px;
-    position:relative;
-    left:-66px;
+    margin-top: 20px;
 
 }
 .circle2{
     width: 54px;
     height: 54px;
-    background-color:#9AC8FF;
+    background-color: rgb(136, 47, 47);
     border-radius: 100%;
     text-align: center;
-    margin-top: 30px;
-    position:relative;
-    left:-131px;
+    margin-top: 20px;
 
 }
 .circle3{
     width: 54px;
     height: 54px;
-    background-color:#9AC8FF;
+    background-color: rgb(181, 72, 179);
     border-radius: 100%;
     text-align: center;
-    margin-top: 30px;
-    position:relative;
-    left:-195px;
+    margin-top: 20px;
 
-}
-.detail p1{
-    margin-right: 10px;
-    position:relative;
-    top:-50px;
-    left:320px;
-}
-.detail p2{
-    margin-right:20px;
-    position:relative;
-    top:-50px;
-    left:460px;
-}
-.detail p3{
-    margin-right:30px;
-    position:relative;
-    top:-50px;
-    left:640px;
-}
-.detail p4{
-    margin-right:200px;
-    position:relative;
-    top:-50px;
-    left:810px;
-}
-.numbernew p4{
-    margin-right: 10px;
-    position:relative;
-    top:-69px;
-    right:-273px;
-
-}
-.numbernew p5{
-    margin-right: 10px;
-    position:relative;
-    top:-69px;
-    right:-500px;
-}
-.numbernew p6{
-    margin-right: 10px;
-    position:relative;
-    top:-69px;
-    right:-725px;
-}
-.numbernew p7{
-    margin-right: 10px;
-    position:relative;
-    top:-69px;
-    right:-953px;
 }
