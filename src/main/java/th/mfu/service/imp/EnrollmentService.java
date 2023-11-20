@@ -14,9 +14,9 @@ import java.time.LocalDate;
 @Service
 public class EnrollmentService {
 
-    private final EnrollmentRepository enrollmentRepository;
-    private final CourseRepository courseRepository;
-    private final UserRepository userRepository;
+    private EnrollmentRepository enrollmentRepository;
+    private CourseRepository courseRepository;
+    private UserRepository userRepository;
 
     @Autowired
     public EnrollmentService(EnrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
@@ -37,5 +37,5 @@ public class EnrollmentService {
         enrollmentRepository.save(enrollment);
     }
 }
-
+    
 

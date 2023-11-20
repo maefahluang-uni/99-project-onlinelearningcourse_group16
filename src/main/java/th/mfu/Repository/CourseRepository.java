@@ -1,8 +1,6 @@
 package th.mfu.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import org.springframework.stereotype.Repository;
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
 

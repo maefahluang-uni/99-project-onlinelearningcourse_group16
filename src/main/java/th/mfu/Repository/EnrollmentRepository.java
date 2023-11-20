@@ -1,7 +1,6 @@
 package th.mfu.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import th.mfu.Model.Course;
 import th.mfu.Model.Enrollment;
 import th.mfu.auth.User;

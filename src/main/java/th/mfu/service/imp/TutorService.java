@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class TutorService {
 
-    private final TutorRepository tutorRepository;
+    private TutorRepository tutorRepository;
 
     @Autowired
     public TutorService(TutorRepository tutorRepository) {
@@ -30,11 +30,11 @@ public class TutorService {
     }
 
     public List<Tutor> getAll() {
-        return (List<Tutor>) tutorRepository.findAll();
+        return tutorRepository.findAll();
     }
 
     public void update(Tutor tutor) {
-        Tutor currentTutor = (Tutor) tutorRepository.findById(tutor.getTutorId()).get();
+        Tutor currentTutor = tutorRepository.findById(tutor.getTutorId()).get();
 
         currentTutor.setTutorName(tutor.getTutorName());
         currentTutor.setTutorSurname(tutor.getTutorSurname());
@@ -46,7 +46,7 @@ public class TutorService {
     }
 
     public void patch(Tutor tutor) {
-        Tutor current = (Tutor) tutorRepository.findById(tutor.getTutorId()).get();
+        Tutor current = tutorRepository.findById(tutor.getTutorId()).get();
 
         current.setTutorDetail(tutor.getTutorDetail());
 
