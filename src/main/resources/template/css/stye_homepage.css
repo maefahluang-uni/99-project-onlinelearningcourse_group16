@@ -238,6 +238,12 @@ section.popAlert aside button[type=button] {
     background-color: #e5e5e5;
     transition: 0.3s all ease-in-out;
 }
+
+.front{
+  position: relative;
+  left: 5px
+}
+
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 

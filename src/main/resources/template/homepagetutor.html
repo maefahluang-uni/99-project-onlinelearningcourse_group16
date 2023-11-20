@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage Tutor</title>
+    <title>newwwwHomepage Tutor</title>
 
     <link rel="stylesheet" href="css/stye_homepagetutor.css">
 
     <script>
-        window.onload = function() {
-            const showPopup = document.querySelectorAll('.bg button');
-            const popupContainers = document.querySelectorAll('.popAlert');
+        function togglePopEnglish() {
+    let popup = document.getElementById('popAlert-english');
+    popup.classList.toggle('active');
+}
 
-            showPopup.forEach((popup, index) => {
-                popup.onclick = () => {
-                    popupContainers[index].classList.toggle('active');
-                }
-            });
+function togglePopMathematics() {
+    let popup = document.getElementById('popAlert-mathematics');
+    popup.classList.toggle('active');
+}
 
-            const closeBtns = document.querySelectorAll('.popAlert button');
-            closeBtns.forEach((closeBtn) => {
-                closeBtn.onclick = () => {
-                    popupContainers.forEach((popup) => {
-                        popup.classList.remove('active');
-                    });
-                }
-            });
+function togglePopBiology() {
+    let popup = document.getElementById('popAlert-biology');
+    popup.classList.toggle('active');
+}
+
+function deleteCourse(courseId) {
+    let courseElement = document.querySelector(`.coursbio`);
+    if (courseElement) {
+        let confirmation = confirm(`Are you sure to delete the coursbio course?`);
+        if (confirmation) {
+            courseElement.parentElement.remove();
         }
+    }
+
+}
     </script>
 
 </head>
@@ -77,7 +83,7 @@
                     </div>
                     <div class="auto-group-afmt-t3b">
                         <img class="icon-wallet-zsK" src="pic/icon _wallet_.svg" id="151"/>
-                        <p class="baht-lifetime-Jd7" id="150">
+                        <p class="baht-lifetime-Jd7" id="152">
                             <span class="baht-lifetime-Jd7-sub-0">1,999 Baht</span>
                             <span class="baht-lifetime-Jd7-sub-1"></span>
                             <span class="baht-lifetime-Jd7-sub-2">/ lifetime</span>
@@ -85,19 +91,9 @@
                     </div>
                     <div class="delete">
                         <popupdelete>
-                            <section class="bg">
-                                <button type="button" onclick="togglePop()">
-                                    <a href="#">
-                                        <img src="pic/emoji%20_delete_.svg" alt="">
-                                    </a>
-                                </button>
-                            </section>
-
-                            <section class="popAlert">
+                            <section id="popAlert-english">
                                 <aside>
-                                    <h2>Are you sure to delete course?</h2>
-                                    <button type="button" onclick="togglePop()">Cancle</button>
-                                    <button type="button" onclick="togglePop()">Delete</button>
+                                    <button type="button" onclick="deleteCourse('english')"> <img src="pic/emoji _delete_.svg" alt=""></button>
                                 </aside>
                             </section>
                         </popupdelete>
@@ -107,7 +103,7 @@
 
             <div class="coursmath">
                 <div class="containcourse">
-                    <img src="pic/Rectanglemath 16 (3).svg" alt="">
+                    <img src="pic/Rectanglemath%2016%20(3).svg" alt="">
                     <div class="title"><p1>Mathematics</p1></div>
 
                     <div class="lessonhour">
@@ -116,8 +112,8 @@
 
                     </div>
                     <div class="auto-group-afmt-t3b">
-                        <img class="icon-wallet-zsK" src="pic/icon _wallet_.svg" id="231:151"/>
-                        <p class="baht-lifetime-Jd7" id="231:150">
+                        <img class="icon-wallet-zsK" src="pic/icon _wallet_.svg" id="153"/>
+                        <p class="baht-lifetime-Jd7" id="150">
                             <span class="baht-lifetime-Jd7-sub-0">2,399 Baht</span>
                             <span class="baht-lifetime-Jd7-sub-1"></span>
                             <span class="baht-lifetime-Jd7-sub-2">/ lifetime</span>
@@ -125,19 +121,9 @@
                     </div>
                     <div class="delete">
                         <popupdelete>
-                            <section class="bg">
-                                <button type="button" onclick="togglePop()">
-                                    <a href="#">
-                                        <img src="pic/emoji%20_delete_.svg" alt="">
-                                    </a>
-                                </button>
-                            </section>
-
-                            <section class="popAlert">
+                            <section id="popAlert-mathematics">
                                 <aside>
-                                    <h2>Are you sure to delete course?</h2>
-                                    <button type="button" onclick="togglePop()">Cancle</button>
-                                    <button type="button" onclick="togglePop()">Delete</button>
+                                    <button type="button" onclick="deleteCourse('mathematics')"><img src="pic/emoji _delete_.svg" alt=""></button>
                                 </aside>
                             </section>
                         </popupdelete>
@@ -149,7 +135,7 @@
         <div class="row2">
             <div class="coursbio">
                 <div class="containcourse">
-                    <img src="pic/Rectangle%2016%20(2).svg" alt="">
+                    <img src="pic/Rectangle 16 (2).svg" alt="">
                     <div class="title"><p1>Biology</p1></div>
 
                     <div class="lessonhour">
@@ -158,7 +144,7 @@
 
                     </div>
                     <div class="auto-group-afmt-t3b">
-                        <img class="icon-wallet-zsK" src="pic/icon _wallet_.svg" id="230:151"/>
+                        <img class="icon-wallet-zsK" src="pic/icon%20_wallet_.svg" id="230:151"/>
                         <p class="baht-lifetime-Jd7" id="230:150">
                             <span class="baht-lifetime-Jd7-sub-0">2,599 Baht</span>
                             <span class="baht-lifetime-Jd7-sub-1"></span>
@@ -167,19 +153,10 @@
                     </div>
                     <div class="delete">
                         <popupdelete>
-                            <section class="bg">
-                                <button type="button" onclick="togglePop()">
-                                    <a href="#">
-                                        <img src="pic/emoji%20_delete_.svg" alt="">
-                                    </a>
-                                </button>
-                            </section>
 
-                            <section class="popAlert">
+                            <section id="popAlert-biology">
                                 <aside>
-                                    <h2>Are you sure to delete course?</h2>
-                                    <button type="button" onclick="togglePop()">Cancle</button>
-                                    <button type="button" onclick="togglePop()">Delete</button>
+                                    <button type="button" onclick="deleteCourse('biology')"><img src="pic/emoji _delete_.svg" alt=""></button>
                                 </aside>
                             </section>
                         </popupdelete>
