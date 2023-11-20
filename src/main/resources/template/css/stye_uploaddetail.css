@@ -225,3 +225,29 @@ top: -70px;
     left:100px;
     bottom:175px;
 }
+
+.required{
+    position: relative;
+    right: 425px;
+    bottom: 590px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Description{
+    position: relative;
+    right: 430px;
+    bottom: 522px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
