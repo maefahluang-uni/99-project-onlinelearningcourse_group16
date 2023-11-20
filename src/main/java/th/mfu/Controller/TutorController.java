@@ -54,7 +54,7 @@ public class TutorController {
     public String getTutorForUpdate(@PathVariable Long tutorId,
                                     Model model) {
         try {
-            Tutor tutorActual = tutorRepository.findById(tutorId).get();
+            Tutor tutorActual = (Tutor) tutorRepository.findById(tutorId).get();
             model.addAttribute("tutor", tutorActual);
             return "tutors/tutor-edit";
         } catch (Exception e) {
@@ -70,7 +70,7 @@ public class TutorController {
                               Tutor tutor, RedirectAttributes attributes, Model model){
 
         try {
-            Tutor currentTutor = tutorRepository.findById(tutorId).get();
+            Tutor currentTutor = (Tutor) tutorRepository.findById(tutorId).get();
             currentTutor.setTutorName(tutor.getTutorName());
             currentTutor.setTutorSurname(tutor.getTutorSurname());
             currentTutor.setTutorEmail(tutor.getTutorEmail());
@@ -92,7 +92,7 @@ public class TutorController {
     public String patchTutor(@PathVariable Long tutorId, Tutor tutor, RedirectAttributes attributes, Model model) {
 
         try {
-            Tutor current = tutorRepository.findById(tutorId).get();
+            Tutor current = (Tutor) tutorRepository.findById(tutorId).get();
             current.setTutorDetail(tutor.getTutorDetail());
             tutorService.patch(current);
 
@@ -117,7 +117,7 @@ public class TutorController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String deleteTutor(@PathVariable Long tutorId, Model model) {
         try {
-            Tutor tutorActual = tutorRepository.findById(tutorId).get();
+            Tutor tutorActual = (Tutor) tutorRepository.findById(tutorId).get();
             tutorService.delete(tutorActual);
 
             return "redirect:/tutors";
@@ -132,7 +132,7 @@ public class TutorController {
     @PreAuthorize("hasRole('ROLE_USER')")
     public String getTutorDetail(@PathVariable Long tutorId, Model model) {
         try {
-            Tutor tutor = tutorRepository.findById(tutorId).get();
+            Tutor tutor = (Tutor) tutorRepository.findById(tutorId).get();
             model.addAttribute("tutor", tutor);
             List<Course> courses = courseRepository.findAllByTutor(tutor);
             model.addAttribute("courses", courses);
