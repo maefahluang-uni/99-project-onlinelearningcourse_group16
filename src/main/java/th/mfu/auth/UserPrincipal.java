@@ -8,8 +8,8 @@ import java.util.*;
 
 public class UserPrincipal implements UserDetails {
 
-    private User user;
-    private List<AuthGroup> authGroups;
+    private  User user;
+    private  List<AuthGroup> authGroups;
 
     public UserPrincipal(User user, List<AuthGroup> authGroups) {
         super();
