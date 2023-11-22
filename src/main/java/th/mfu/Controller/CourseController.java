@@ -57,7 +57,7 @@ public class CourseController {
             model.addAttribute("error", e);
             return "error";
         }
-    }
+    }//
 
     @PostMapping("/add/{tutorId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
