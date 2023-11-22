@@ -83,11 +83,11 @@
         </dependency>
 
         <!-- Camunda BPM with Jakarta EE dependencies -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.camunda.bpm.springboot</groupId>
             <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
-            <version>${camunda.version}</version> <!-- Replace with the version compatible with Spring Boot 3.1 -->
-        </dependency>
+            <version>${camunda.version}</version>
+        </dependency> -->
 
     </dependencies>
 
