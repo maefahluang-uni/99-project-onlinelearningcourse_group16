@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload-video</title>
+
+    <link rel="stylesheet" href="css/stye_uploadvideo-popup.css">
+
+    <script>
+        window.onload = function() {
+            const showPopup = document.querySelectorAll('.bg button');
+            const popupContainers = document.querySelectorAll('.popAlert');
+
+            function togglePop(index) {
+                popupContainers.forEach((popup, i) => {
+                    if (i === index) {
+                        popup.classList.toggle('active');
+                    } else {
+                        popup.classList.remove('active');
+                    }
+                });
+            }
+
+            showPopup.forEach((popup, index) => {
+                popup.onclick = () => {
+                    togglePop(index);
+                };
+            });
+
+            const closeBtns = document.querySelectorAll('.popAlert button');
+            closeBtns.forEach((closeBtn) => {
+                closeBtn.onclick = () => {
+                    popupContainers.forEach((popup) => {
+                        popup.classList.remove('active');
+                    });
+                }
+            });
+        }
+    </script>
+
+</head>
+ <body>
+    <contain>
+        <header>
+            <div class="navbar">
+                <div class="headerja">
+                    <div class="logo">
+                        <img class="card__img-upload" src="pic/tempImage.svg" alt="">
+                    </div>
+                    <div class="ringring">
+                        <img class="card__img-upload"  src="pic/icon _bell ring outline_.svg" alt="">
+                    </div>
+                    <div class="profile">
+                        <img src="pic/Ellipse 111.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    </contain>
+    <jud>
+
+        <div class="cri">
+            <div class="circle"></div>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle5"></div>
+        </div>
+        <div class="detail">
+            <p1>Upload video</p1>
+            <p2>Details</p2>
+            <p3>Sheet</p3>
+            <p4>Successful</p4>
+        </div>
+        <div>
+            <div class="numbernew">
+                <p4>1</p4>
+                <p5>2</p5>
+                <p6>3</p6>
+                <p7>4</p7>
+            </div>
+    
+        </div>
+    </jud>
+    
+    <body>
+        <div class="box">
+            <div class="w">
+                <div style="height: 20px;"></div>
+                <div class="titless"><p1>Upload video</p1></div> 
+
+                <div class="imgbox"> 
+                    <a href="">            
+                        <img src="pic/uploadFiles.svg" alt="">
+                    </a>
+                </div>
+                <div style="height: 170px;"></div>
+                <div class="pr">
+                    <a href="homepagetutor.html">
+                        <button type="button" class="btn">Previous</button>
+                    </a>
+                    <a href="">
+                        <button type="button" class="btn1">Next</button>
+                    </a> 
+                    <footer>
+                        <img src="pic/Rectangle 2.svg" alt="">    
+                    </div>
+                </footer>
+            </div>
+            </div>
+        </head>
+        <div class="click here">
+            <popupdelete>
+                <section class="bg">
+                    <button type="button" onclick="togglePop()">
+                        <aside>
+                            <div class="close-btn">
+                                <h1>Upload video</h1>
+                                <h2>Are you sure want to upload course?</h2>
+                            </div>
+                    </aside>
+                        
+                    </button>
+                </section>
+                <section class="popAlert">
+                </section>
+            </popupdelete>
+
+            <div class="buttom">
+                <a href="uploadvideo.html">
+                    <button class="button1" onclick="togglePop()">Cancle</button>
+                </a>
+                <a href="uploadfinish.html">
+                    <button class="button2" onclick="togglePop()">Yes</button>
+                </a>
+             </div>
+
+        </div>
+    </body>
+ </body>
+</html>
