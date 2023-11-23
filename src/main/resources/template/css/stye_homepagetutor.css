@@ -14,7 +14,7 @@ contain{
 }
 
 .navbar{
-    width: 1440px;
+    width: 1800px;
     height: 100px;
     flex-shrink: 0;
     background: #00001D;
@@ -31,7 +31,7 @@ contain{
 
 .ringring{
     margin-top: 25px;
-    margin-left: 1000px;*{
+    margin-left: 1120px;*{
                             margin: 0;
                             padding: 0;
                             box-sizing: border-box;
@@ -62,8 +62,8 @@ contain{
 
                         .ringring{
                             margin-top: 25px;
-                            margin-left: 1000px;
-                        }
+                            margin-left: 1300px;
+                                                    }
 
                         .profile{
                             margin-left: 30px;
@@ -75,6 +75,8 @@ contain{
 .profile{
     margin-left: 30px;
     margin-top: 13.5px;
+    position: relative;
+    left: 0px;
 }
 
 .auto-group-9efs-8uf{
