@@ -30,45 +30,36 @@ contain{
 }
 
 .ringring{
-    margin-top: 25px;
-    margin-left: 1120px;*{
-                            margin: 0;
-                            padding: 0;
-                            box-sizing: border-box;
-                            font-family: 'Inter', sans-serif;
-                        }
 
-                        contain{
-                            max-width: 5000px;
-                            height: 1741px;
-                            margin: 10px auto;
-                        }
+}
 
-                        .navbar{
-                            width: 1440px;
-                            height: 100px;
-                            flex-shrink: 0;
-                            background: #00001D;
-                        }
+contain{
+    max-width: 5000px;
+    height: 1741px;
+    margin: 10px auto;
+}
 
-                        .headerja{
-                            padding: 10px;
-                            display: flex;
-                        }
+.navbar{
+    width: 1440px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #00001D;
+}
 
-                        .logo{
-                            margin-left: 80px;
-                        }
+.headerja{
+    padding: 10px;
+    display: flex;
+}
 
-                        .ringring{
-                            margin-top: 25px;
-                            margin-left: 1300px;
-                                                    }
+.logo{
+    margin-left: 80px;
+}
 
-                        .profile{
-                            margin-left: 30px;
-                            margin-top: 13.5px;
-                        }
+
+.profile{
+    margin-left: 30px;
+    margin-top: 13.5px;
+}
 
 }
 
