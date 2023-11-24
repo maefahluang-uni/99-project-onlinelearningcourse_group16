@@ -1,11 +1,12 @@
 Online Learning Course
 =============
 
-### Description
+# Description
+
 Tutoring with a large number of students results in teaching the same content over and over. This makes tutors not want to teach the same content over and over again and wants to save teaching time. The solution to the tutor's problem is to need an online learning course website. By recording a video clip once and uploading the clip to its own online learning course website so that its own students can study and review without the tutor having to repeat the teaching. And the expected benefit from implementing the product project is that it can help tutors save time teaching students by not having to teach students the same subject over and over. Where tutors can upload courses and delete courses.
 
 
-### Team member
+# Team member
 
 | Student ID   | First Name | Last Name     | Github account           |
 |--------------|------------|---------------|--------------------------|
@@ -17,5 +18,5 @@ Tutoring with a large number of students results in teaching the same content ov
 | 6531503061   | Phetcharat | Singhattha    | 061Phetcharat-Singhattha |
 
 
-### Deployed on Google Cloud
+# Deployed on Google Cloud
 " None "
