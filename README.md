@@ -19,4 +19,4 @@ Tutoring with a large number of students results in teaching the same content ov
 
 
 # Deployed on Google Cloud
-" None "
+"None"
