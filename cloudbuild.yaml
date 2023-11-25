@@ -21,6 +21,7 @@ steps:
    - 'managed'
    - '--port'
    - '8100'
+   
 images:
  - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/webdev-dockers/lab-cd'
 

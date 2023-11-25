@@ -19,7 +19,7 @@ import java.util.List;
 @Controller
 @PreAuthorize("hasRole('ROLE_USER')")
 @AllArgsConstructor
-public class SecurityController {
+<userService> public class SecurityController {
 
     private final UserRepository userRepository;
     private final EnrollmentRepository enrollmentRepository;
