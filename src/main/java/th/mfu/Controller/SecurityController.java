@@ -1,6 +1,5 @@
 package th.mfu.Controller;
 
-import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -17,9 +16,11 @@ import th.mfu.service.imp.UserService;
 import java.util.List;
 
 @Controller
-@PreAuthorize("hasRole('ROLE_USER')")
-@AllArgsConstructor
+@UserRepository
+@EnrollmentRepository
 @UserService
+@PreAuthorize("hasRole('ROLE_USER')")
+
     public class SecurityController {
 
     private final UserRepository userRepository;
