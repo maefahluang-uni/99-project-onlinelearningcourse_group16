@@ -12,8 +12,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
 import java.time.LocalDate;
-import javax.persistence.*;
-import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor

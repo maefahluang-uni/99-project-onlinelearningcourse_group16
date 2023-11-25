@@ -8,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 
 @NoArgsConstructor
 @Data

@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import th.mfu.auth.User;
 
-import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
