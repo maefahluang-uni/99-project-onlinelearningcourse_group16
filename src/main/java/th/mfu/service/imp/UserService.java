@@ -1,6 +1,5 @@
 package th.mfu.service.imp;
 
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -14,7 +13,7 @@ import java.time.LocalDate;
 
 @Service
 @Slf4j
-@AllArgsConstructor
+
 public class UserService {
 
     private final UserRepository userRepository;
