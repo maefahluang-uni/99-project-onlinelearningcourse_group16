@@ -1,10 +1,10 @@
 steps:
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
-   args: [ 'build', '-t', 'us-central1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd:$COMMIT_SHA', '.' ]
+   args: [ 'build', '-t', 'asia-southeast1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd:$COMMIT_SHA', '.' ]
  # Push the container image to Artifact Registry
  - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'us-central1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd:$COMMIT_SHA']
+   args: ['push', 'asia-southeast1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd:$COMMIT_SHA']
  # Deploy container image to Cloud Run
  - name: 'gcr.io/cloud-builders/gcloud'
    entrypoint: gcloud
@@ -13,9 +13,9 @@ steps:
    - 'deploy'
    - 'lab-cd'
    - '--image'
-   - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd:$COMMIT_SHA'
+   - 'asia-southeast1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd:$COMMIT_SHA'
    - '--region'
-   - 'us-central1'
+   - 'asia-southeast1'
    - '--allow-unauthenticated'
    - '--platform'
    - 'managed'
@@ -23,7 +23,7 @@ steps:
    - '8100'
 
 images:
- - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd'
+ - 'asia-southeast1-docker.pkg.dev/${_PROJECT_ID}/course-docker/lab-cd'
 
 substitutions:
   _PROJECT_ID: 'voltaic-wall-405706'
