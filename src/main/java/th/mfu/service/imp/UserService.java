@@ -1,5 +1,6 @@
 package th.mfu.service.imp;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.time.LocalDate;
 
 @Service
 @Slf4j
-
+@AllArgsConstructor
 public class UserService {
 
     private final UserRepository userRepository;
@@ -36,7 +37,7 @@ public class UserService {
         String imgUrl = userDto.getImgUrl();
         LocalDate date = LocalDate.now();
         User user = new User(username, password, name, surname, email, imgUrl, date);
-        AuthGroup group = new AuthGroup();
+        AuthGroup group = new AuthGroup(imgUrl, imgUrl);
 
         group.setUsername(userDto.getUsername());
         group.setAuthgroup("USER");
