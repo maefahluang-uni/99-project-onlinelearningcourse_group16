@@ -18,7 +18,7 @@ import java.util.List;
 
 @Controller
 @PreAuthorize("hasRole('ROLE_USER')")
-@UserRepository
+@AllArgsConstructor
 @UserService
     public class SecurityController {
 

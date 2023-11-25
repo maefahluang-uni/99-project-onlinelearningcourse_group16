@@ -1,61 +1,79 @@
 package th.mfu.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.authority.mapping.GrantedAuthoritiesMapper;
-import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import th.mfu.auth.LearningUser;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
-public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    @Autowired
-    private LearningUser userDetailsService;
+public class ApplicationSecurityConfiguration {
 
     @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setUserDetailsService(userDetailsService);
-        provider.setPasswordEncoder(new BCryptPasswordEncoder(11));
-        provider.setAuthoritiesMapper(authoritiesMapper());
-        return provider;
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+
+        
+          http
+            .csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(auth -> {
+                auth.requestMatchers("/tutor/**").hasAuthority("TUTOR");
+                auth.requestMatchers("/student/**").hasAuthority("STUDENT");
+                auth.anyRequest().permitAll();
+            }).formLogin(formLogin -> formLogin.loginPage("/login")).oauth2Login(oauth2Login -> oauth2Login.loginPage("/login")).httpBasic();
+            //.formLogin(Customizer.withDefaults()).oauth2Login(Customizer.withDefaults()).httpBasic();//
+            return http.build();
+
+         
+        /* 
+        http.authorizeHttpRequests((requests) -> requests
+                .requestMatchers("/tutor/**").hasAnyAuthority("TUTOR")
+                .requestMatchers("/student/**").authenticated()
+                .anyRequest().permitAll())
+                .formLogin(Customizer.withDefaults()).oauth2Login(Customizer.withDefaults())
+                .httpBasic(Customizer.withDefaults());
+        return http.build();
+        */
+        }
+        /* 
+        @Bean
+        public UserDetailsService userDetailsService(DataSource dataSource)
+        {
+            return new JdbcUserDetailsManager(dataSource);
+        }
+        */
+        @Bean
+        public PasswordEncoder passwordEncoder() {
+            return NoOpPasswordEncoder.getInstance();
+        }
+
+       
+        /* 
+        @Bean
+        public InMemoryUserDetailsManager userDetailsService() {
+            UserDetails admin = User.withUsername("tutor")
+                    .password("12345")
+                    .authorities("TUTOR")
+                    .build();
+            return new InMemoryUserDetailsManager(admin);
+        }
+         */
+        /*@Bean
+        public UserDetailsService userDetailsService(DataSource dataSource) {
+            return new JdbcUserDetailsManager(dataSource);
+        }*/
+    
+
     }
 
-    public GrantedAuthoritiesMapper authoritiesMapper() {
-        SimpleAuthorityMapper authorityMapper = new SimpleAuthorityMapper();
-        authorityMapper.setConvertToUpperCase(true);
-        authorityMapper.setDefaultAuthority("USER");
-        return authorityMapper;
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authenticationProvider());
-    }
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().headers().frameOptions().disable().and().authorizeRequests()
-                .antMatchers("/", "/index", "/discover", "/courses", "/h2-console/**", "/api/**","/register", "/css/**",
-                        "/js/**",
-                        "/img/**").permitAll()
-                .anyRequest().authenticated()
-                .and().formLogin()
-                .loginPage("/login").permitAll()
-                .and()
-                .logout().invalidateHttpSession(true)
-                .clearAuthentication(true).logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/logout-success").permitAll();
-    }
-}
