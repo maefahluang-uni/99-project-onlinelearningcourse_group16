@@ -1,15 +1,15 @@
 package th.mfu.auth;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+
 @Entity
 @Table(name = "user")
 public class User {

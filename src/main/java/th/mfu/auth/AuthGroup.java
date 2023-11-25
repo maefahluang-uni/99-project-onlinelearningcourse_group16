@@ -1,12 +1,15 @@
 package th.mfu.auth;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 
-@NoArgsConstructor
-@Data
+
+
 @Entity
 @Table(name = "AUTH_USER_GROUP")
 public class AuthGroup {
