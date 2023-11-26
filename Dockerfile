@@ -10,10 +10,8 @@ FROM openjdk:17.0.1-jdk-slim
 WORKDIR /usr/local/lib
 COPY --from=build /home/app/target/*.jar app.jar
 
-# Set default port as an environment variable
-ENV PORT 5500
 
 # Expose the port (this is for documentation purposes)
-EXPOSE $PORT
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
