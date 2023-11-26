@@ -1,5 +1,4 @@
 package th.mfu.service.imp;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import th.mfu.Model.Course;
 import th.mfu.Model.Enrollment;
@@ -18,7 +17,6 @@ public class EnrollmentService {
     private CourseRepository courseRepository;
     private UserRepository userRepository;
 
-    @Autowired
     public EnrollmentService(EnrollmentRepository enrollmentRepository, CourseRepository courseRepository, UserRepository userRepository) {
         this.enrollmentRepository = enrollmentRepository;
         this.courseRepository = courseRepository;
