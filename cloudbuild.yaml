@@ -20,8 +20,11 @@ steps:
       - '--platform'
       - 'managed'
       - '--port'
-      - '8080'  # Update this to the port your Spring Boot app is configured to use
-
+      - '80'
+      - '--protocol'
+      - 'TCP'
+      - 'targetPort'
+      - '8080'
 images:
   - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/webdev-dockers/lab-cd'
 
