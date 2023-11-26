@@ -2,7 +2,6 @@ package th.mfu.service.imp;
 
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import th.mfu.Model.Course;
 import th.mfu.Model.Tutor;
@@ -16,7 +15,6 @@ public class CourseService{
 
     private CourseRepository courseRepository;
 
-    @Autowired
     public CourseService(CourseRepository courseRepository) {
         this.courseRepository = courseRepository;
     }
