@@ -180,16 +180,8 @@ https://repo.maven.apache.org/maven2: java.net.SocketTimeoutException: Connect t
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
-                    <source>${java.version}</source> 
-                    <target>${java.version}</target>   
+                    <executable>true</executable>
                 </configuration>
             </plugin>
         </plugins>
