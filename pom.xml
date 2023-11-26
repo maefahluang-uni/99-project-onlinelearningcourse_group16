@@ -27,6 +27,15 @@
           <scope>import</scope>
           </dependency>
       </dependencies>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>2.4.4</version>
+        <configuration>
+            <project>webdev-dockers</project>
+        </configuration>
+    </plugin>
+
     </dependencyManagement>
 
     <dependencies>

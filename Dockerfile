@@ -12,6 +12,6 @@ COPY --from=build /home/app/target/*.jar app.jar
 
 
 # Expose the port (this is for documentation purposes)
-EXPOSE 80
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
