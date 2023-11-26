@@ -19,7 +19,10 @@ steps:
    - '--allow-unauthenticated'
    - '--platform'
    - 'managed'
-
+   - '--host'
+   - '0.0.0.0'
+   - '--port'
+   - '8090'
 
 images:
  - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/webdev-dockers/lab-cd'
