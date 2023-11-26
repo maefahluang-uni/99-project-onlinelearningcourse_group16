@@ -11,7 +11,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'lab-cd'
+      - 'learning-course'
       - '--image'
       - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/course-dockers/learning-course:$COMMIT_SHA'
       - '--region'
