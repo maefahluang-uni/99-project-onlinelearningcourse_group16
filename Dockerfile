@@ -11,7 +11,7 @@ WORKDIR /usr/local/lib
 COPY --from=build /home/app/target/*.jar app.jar
 
 # Set default port as an environment variable
-ENV PORT 8090
+ENV PORT 8080
 
 # Expose the port (this is for documentation purposes)
 EXPOSE $PORT
