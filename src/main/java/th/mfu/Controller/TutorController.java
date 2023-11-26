@@ -1,5 +1,6 @@
 package th.mfu.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,7 @@ public class TutorController {
     private TutorRepository tutorRepository;
     private CourseRepository courseRepository;
 
+    @Autowired
     public TutorController(TutorService tutorService, TutorRepository tutorRepository,
                            CourseRepository courseRepository) {
         this.tutorService = tutorService;

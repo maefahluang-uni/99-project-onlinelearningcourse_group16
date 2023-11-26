@@ -1,6 +1,7 @@
 package th.mfu.Controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -32,7 +33,7 @@ public class CourseController {
     private UserRepository userRepository;
     private TutorRepository tutorRepository;
 
-    
+    @Autowired
     public CourseController(CourseService courseService, CourseRepository courseRepository,
                             EnrollmentRepository enrollmentRepository, UserRepository userRepository, TutorRepository tutorRepository) {
         super();

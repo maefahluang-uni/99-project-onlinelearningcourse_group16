@@ -1,6 +1,7 @@
 package th.mfu.Controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,7 @@ public class APIController {
     private TutorService tutorService;
     private CourseService courseService;
 
-
+    @Autowired
     public APIController(TutorService tutorService, CourseService courseService) {
         super();
         this.tutorService = tutorService;

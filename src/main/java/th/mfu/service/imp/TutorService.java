@@ -1,5 +1,6 @@
 package th.mfu.service.imp;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import th.mfu.Model.Tutor;
 import th.mfu.Repository.TutorRepository;
@@ -12,6 +13,7 @@ public class TutorService {
 
     private TutorRepository tutorRepository;
 
+    @Autowired
     public TutorService(TutorRepository tutorRepository) {
         this.tutorRepository = tutorRepository;
     }
