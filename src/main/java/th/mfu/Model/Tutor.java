@@ -33,15 +33,16 @@ public class Tutor {
     private String tutorDescription;
     @Column(name = "detail")
     private String tutorDetail;
-    private String imgUrl;
 
 
-    public Tutor(String tutorName, String tutorSurname, String tutorEmail, String tutorDescription, String imgUrl) {
+    //construtors
+
+    public Tutor(String tutorName, String tutorSurname, String tutorEmail, String tutorDescription) {
         this.tutorName = tutorName;
         this.tutorSurname = tutorSurname;
         this.tutorEmail = tutorEmail;
         this.tutorDescription = tutorDescription;
-        this.imgUrl = imgUrl;
+       
     }
 
     public Tutor(String tutorDetail) {

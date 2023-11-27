@@ -19,6 +19,7 @@ public class LearningUser implements UserDetailsService {
         this.authGroupRepository = authGroupRepository;
     }
 
+    //
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = this.userRepository.findByUsername(username);

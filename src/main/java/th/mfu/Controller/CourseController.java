@@ -44,6 +44,7 @@ public class CourseController {
         this.tutorRepository = tutorRepository;
     }
 
+    //getting "tutor add course"
     @GetMapping("/add/{tutorId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String addCourse(@PathVariable Long tutorId, Model model) {
@@ -57,8 +58,9 @@ public class CourseController {
             model.addAttribute("error", e);
             return "error";
         }
-    }//
+    }
 
+    //post "tutor add course"
     @PostMapping("/add/{tutorId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String saveCourse(@PathVariable Long tutorId, CourseDto course, Model model) {
@@ -75,6 +77,7 @@ public class CourseController {
 
     }
 
+    //get "edit-course"
     @GetMapping("/edit/{courseId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String getCourseForUpdate(@PathVariable Long courseId, Model model) {
@@ -89,6 +92,7 @@ public class CourseController {
         }
     }
 
+    //post "edit-course"
     @PostMapping("/edit/{tutorId}/{courseId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String updateCourse(@PathVariable Long tutorId, @PathVariable Long courseId, Course course, Model model, RedirectAttributes attributes) {
@@ -108,6 +112,7 @@ public class CourseController {
         }
     }
 
+    //get "course-list"
     @GetMapping
     public String getCoursesList(Model model) {
         List<Course> courses = courseService.getAll();
@@ -115,6 +120,7 @@ public class CourseController {
         return "courses/courses";
     }
 
+    //get "delete course"
     @GetMapping("/delete/{courseId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String deleteCourse(@PathVariable Long courseId, Model model) {
@@ -130,6 +136,7 @@ public class CourseController {
         }
     }
 
+    
     @GetMapping("/{courseId}")
     @PreAuthorize("hasRole('ROLE_USER')")
     public String getCourseDetail(@PathVariable Long courseId, Authentication authentication, Model model) {

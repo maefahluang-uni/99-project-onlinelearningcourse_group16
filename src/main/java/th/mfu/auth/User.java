@@ -34,14 +34,6 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -90,14 +82,6 @@ public class User {
         this.detail = detail;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
     public LocalDate getDate() {
         return date;
     }
@@ -111,13 +95,12 @@ public class User {
     @Column(name = "registration_date")
     private LocalDate date;
 
-    public User(String username, String password, String name, String surname, String email, String imgUrl, LocalDate date) {
+    public User(String username, String password, String name, String surname, String email, LocalDate date) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
         this.email = email;
-        this.imgUrl = imgUrl;
         this.date = date;
     }
 

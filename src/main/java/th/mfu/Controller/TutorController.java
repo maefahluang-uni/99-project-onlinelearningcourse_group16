@@ -75,7 +75,7 @@ public class TutorController {
             currentTutor.setTutorSurname(tutor.getTutorSurname());
             currentTutor.setTutorEmail(tutor.getTutorEmail());
             currentTutor.setTutorDescription(tutor.getTutorDescription());
-            currentTutor.setImgUrl(tutor.getImgUrl());
+            
 
             tutorService.update(tutor);
             attributes.addAttribute("tutorId", tutorId);

@@ -19,6 +19,7 @@ public class CourseService{
         this.courseRepository = courseRepository;
     }
 
+    //
     public void create(CourseDto courseDto) throws Exception{
         if (null != courseRepository.findByCourseName(courseDto.getCourseName())) {
             throw new Exception("There's already a course with the name " + courseDto.getCourseName());
@@ -35,6 +36,7 @@ public class CourseService{
         courseRepository.save(course);
     }
 
+    //to update course 
     public void update(Course course, Long courseId) {
         Course currentCourse = courseRepository.findById(courseId).get();
 
@@ -50,6 +52,7 @@ public class CourseService{
 
     }
 
+    //delete course
     public void delete(Course course) { courseRepository.delete(course); }
 
 

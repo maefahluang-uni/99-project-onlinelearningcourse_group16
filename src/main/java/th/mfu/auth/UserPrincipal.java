@@ -17,8 +17,10 @@ public class UserPrincipal implements UserDetails {
         this.authGroups = authGroups;
     }
 
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+
         if (null == authGroups) {
             return Collections.emptySet();
         }

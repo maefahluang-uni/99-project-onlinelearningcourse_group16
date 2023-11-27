@@ -51,6 +51,8 @@ public class Course {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Tutor tutor;
 
+
+    //construtors
     public Course(String courseName, String courseDescription, String courseDetail, String courseDifficulty, String courseUrl, String imgUrl, Tutor tutor) {
         this.courseName = courseName;
         this.courseDescription = courseDescription;

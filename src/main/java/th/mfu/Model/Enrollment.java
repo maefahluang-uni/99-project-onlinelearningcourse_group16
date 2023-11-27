@@ -38,6 +38,8 @@ public class Enrollment {
     @JoinColumn(name = "courseId", nullable = false)
     private Course course;
 
+    //construtors
+    
     public Enrollment(LocalDate enrollmentDate, User userName, Course course) {
         this.enrollmentDate = enrollmentDate;
         this.userName = userName;

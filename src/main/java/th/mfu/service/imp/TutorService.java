@@ -18,13 +18,13 @@ public class TutorService {
         this.tutorRepository = tutorRepository;
     }
 
+    //create tutor
     public void create(TutorDto tutorDto) {
         String name = tutorDto.getName();
         String surname = tutorDto.getSurname();
         String email = tutorDto.getEmail();
         String description = tutorDto.getDescription();
-        String imgUrl = tutorDto.getImgUrl();
-        Tutor tutor = new Tutor(name, surname, email, description, imgUrl);
+        Tutor tutor = new Tutor(name, surname, email,description);
 
         tutorRepository.save(tutor);
     }
@@ -33,6 +33,7 @@ public class TutorService {
         return tutorRepository.findAll();
     }
 
+    //update tutor
     public void update(Tutor tutor) {
         Tutor currentTutor = tutorRepository.findById(tutor.getTutorId()).get();
 
@@ -40,7 +41,7 @@ public class TutorService {
         currentTutor.setTutorSurname(tutor.getTutorSurname());
         currentTutor.setTutorEmail(tutor.getTutorEmail());
         currentTutor.setTutorDescription(tutor.getTutorDescription());
-        currentTutor.setImgUrl(tutor.getImgUrl());
+        
 
         tutorRepository.save(currentTutor);
     }

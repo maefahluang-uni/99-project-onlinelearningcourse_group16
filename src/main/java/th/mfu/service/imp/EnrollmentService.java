@@ -25,6 +25,7 @@ public class EnrollmentService {
         this.userRepository = userRepository;
     }
 
+    //enrollment course
     public void createEnrollment(Long courseId, String username) throws Exception {
         Course course = courseRepository.findById(courseId).get();
         User user = userRepository.findByUsername(username);

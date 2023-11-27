@@ -20,6 +20,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final AuthGroupRepository authGroupRepository;
 
+    
     public void createUser(UserDto userDto) throws IllegalStateException {
 
         if (null != userRepository.findByUsername(userDto.getUsername())) {
@@ -32,12 +33,10 @@ public class UserService {
         String name = userDto.getName();
         String surname = userDto.getSurname();
         String email = userDto.getEmail();
-        log.info("Getting image");
         log.info("about to upload");
-        String imgUrl = userDto.getImgUrl();
         LocalDate date = LocalDate.now();
-        User user = new User(username, password, name, surname, email, imgUrl, date);
-        AuthGroup group = new AuthGroup(imgUrl, imgUrl);
+        User user = new User(username, password, name, surname, email, date);
+        AuthGroup group = new AuthGroup();
 
         group.setUsername(userDto.getUsername());
         group.setAuthgroup("USER");
@@ -52,7 +51,6 @@ public class UserService {
         current.setName(user.getName());
         current.setSurname(user.getUsername());
         current.setEmail(user.getEmail());
-        current.setImgUrl(user.getImgUrl());
 
         userRepository.save(current);
     }
