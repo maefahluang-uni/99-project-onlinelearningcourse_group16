@@ -10,19 +10,41 @@
 
     
     <div class="container1">
-        <h3>Create an account</h3>
-        <label for="uname"><b>Username</b></label><br>
-        <input type="text" placeholder="Enter your name here" name="uname" required><br><br>
-        <label for="email"><b>Email</b></label><br>
-        <input type="text" placeholder="Enter your Email here" name="email" required><br><br>
-        <label for="psw"><b>Password</b></label><br>
-        <input type="password" placeholder="Enter your Password here" name="psw" required><br><br>
+<form method="post"th:object="${userDto}"th:action="@{/register}" >
+                    <div th:if="${param.error}">
+                        <h5 class="center red-text text-lighten-1">Create an Account</h5>
+                    </div>
+                    <br>
 
-        <div class="btn2">
-            <a href="login-student.html">
-            <button type="submit">sign up</button><br><br>
-              </a>
-        </div>
+                    <div class="input-field">
+                      <label for="username">UserName</label>
+                      <input type="text" class="class-controller"
+                             id="username" th:field="*{username}" required
+                      >
+                  </div>
+
+
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="text" class="class-controller"
+                               id="email" th:field="*{email}" required
+                        >
+                    </div>
+
+
+                   
+
+                    <div class="input-field mb-5">
+                        <label for="password">Password</label>
+                        <input type="password" class="class-controller"
+                               id="password" th:field="*{password}" required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn right" id="submit">
+                        Sign Up
+                    </button>
+                </form>
 
         <div >
             <span class="psw">Already have an account? <a href="login-student.html">Login</a></span>
